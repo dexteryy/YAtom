@@ -1,0 +1,156 @@
+# Your keymap
+#
+# Atom keymaps work similarly to stylesheets. Just as stylesheets use selectors
+# to apply styles to elements, Atom keymaps use selectors to associate
+# keystrokes with events in specific contexts.
+#
+# You can create a new keybinding in this file by typing "key" and then hitting
+# tab.
+#
+# Here's an example taken from Atom's built-in keymap:
+#
+# '.editor':
+#   'enter': 'editor:newline'
+#
+# 'body':
+#   'ctrl-P': 'core:move-up'
+#   'ctrl-p': 'core:move-down'
+#
+
+# config.cson
+# 
+# "keymap-disabler":
+#   communityPackages: [
+#     "*"
+#   ]
+#   communityPackagesException: [
+#     "vim-mode"
+#     "vim-surround"
+#     "jumpy"
+#     "toggle-quotes"
+#     "svg-preview"
+#   ]
+#   bundledPackages: [
+#     "symbols-view"
+#     "bookmarks"
+#     "git-diff"
+#     "open-on-github"
+#   ]
+
+# ==============================================================================
+
+'.platform-darwin atom-text-editor':
+  'cmd-e': 'unset!' # 'find-and-replace:use-selection-as-find-pattern'
+'.platform-darwin atom-text-editor':
+  'cmd-g': 'unset!' # 'find-and-replace:find-next'
+'.platform-darwin atom-text-editor':
+  'shift-cmd-G': 'unset!' # 'find-and-replace:find-previous'
+  
+# ==============================================================================
+  
+'atom-workspace atom-text-editor:not(.mini)':
+  'shift-enter': 'unset!' # 'jumpy:toggle'
+
+'atom-workspace':
+  'alt-cmd-v': 'unset!' # 'svg-preview:toggle'
+  
+# ==============================================================================
+  
+'atom-text-editor.vim-mode:not(.insert-mode)':
+  ':': 'command-palette:toggle'
+  # 'cmd-alt-,': 'open ~/.atom/config.cson'
+  # 'cmd-alt-.': 'open ~/.atom/keymap.cson'
+  
+  '/': 'find-and-replace:show'
+  '*': 'find-and-replace:use-selection-as-find-pattern'
+  'n': 'find-and-replace:find-next'
+  'shift-n': 'find-and-replace:find-previous'
+  
+  ', /': 'project-find:show'
+  
+  ', n space': 'editor:toggle-line-comments'
+  ', n m': 'block-comment:toggle'
+  
+  ', m m': 'bookmarks:toggle-bookmark'
+  ', m h': 'bookmarks:toggle-bookmark'
+  ', m a': 'bookmarks:clear-bookmarks'
+  ', m v': 'bookmarks:view-all'
+  
+  'z M': 'editor:fold-all'
+  'z R': 'editor:unfold-all'
+  
+  ', n t': 'tree-view:toggle'
+  ', t b': 'symbols-tree-view:toggle'
+  ', t l': 'todo-show:find-in-project'
+  
+  ', d f': 'dash:shortcut'
+  ', d g': 'dash:shortcut-alt'
+  ', d l': 'link:open'
+  ', d c': 'color-picker:open'
+  ', d b': 'bezier-curve-editor:open'
+  
+  ', g s': 'git-plus:status'
+  ', g a': 'git-plus:add'
+  ', g l': 'git-log:show'
+  ', g h': 'git-plus:log-current-file'
+  # ', g d': 'git-plus:diff'
+  ', g v': 'git-difftool:diff-project'
+  ', g f': 'open-on-github:file'
+  # 'alt-g h': 'open-on-github:history'
+  ', g i': 'open-on-github:issues'
+  ', g b': 'open-on-github:blame'
+  # 'alt-g r': 'open-on-github:branch-compare'
+  
+'atom-text-editor.vim-mode.visual-mode':
+  'enter space': 'atom-alignment:align'
+  'enter * space': 'atom-alignment:alignMultiple'
+  'enter b': 'atom-beautify:beautify-editor'
+  'z f': 'editor:fold-selection'
+  
+'atom-text-editor:not(.mini).vim-mode:not(.insert-mode):not(.jumpy-jump-mode)':
+  ';': 'jumpy:toggle'
+
+# ==============================================================================
+
+'atom-text-editor:not(.mini).vim-mode:not(.insert-mode)':
+  'tab': 'editor:indent-selected-rows'
+  'shift-tab': 'editor:outdent-selected-rows'
+  
+'atom-text-editor:not(.mini).autocomplete-active':
+  # 'enter': 'core:move-down'
+  # 'shift-enter': 'core:move-up'
+  # 'space': 'autocomplete-plus:confirm'
+  'ctrl-n': 'core:move-down'
+  'ctrl-p': 'core:move-up'
+  'space': 'autocomplete-plus:cancel'
+  
+# ==============================================================================
+  
+'body.platform-darwin':
+  'cmd-o': 'advanced-open-file:toggle'
+
+'.platform-darwin atom-workspace':
+  'cmd-alt-n': 'advanced-new-file:toggle'
+  
+'.platform-darwin atom-workspace':
+  'cmd-t': 'recent-files-fuzzy-finder:toggle-finder'
+  
+'.platform-darwin':
+  'cmd-shift-h': 'git-plus:menu'
+  
+'.platform-darwin atom-text-editor':
+  'cmd-i': 'script:run'
+  
+'.platform-darwin atom-text-editor:not(.mini)':
+  'cmd-shift-/': 'block-comment:toggle'
+
+'atom-text-editor[data-grammar="text html basic"]:not([mini]), atom-text-editor[data-grammar~="jade"]:not([mini])':
+  'cmd-shift-e': 'emmet:expand-abbreviation'
+  # 'tab': 'emmet:expand-abbreviation-with-tab'
+  
+# '.platform-darwin atom-workspace':
+#   'ctrl-shift-O': 'link:open'
+
+# 'atom-text-editor':
+#   'ctrl-h': 'dash:shortcut'
+#   'ctrl-alt-h': 'dash:shortcut-alt'

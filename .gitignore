@@ -1,0 +1,7 @@
+packages/
+.apm/
+.node-gyp/
+.tern-project
+compile-cache/
+storage/
+config.cson
