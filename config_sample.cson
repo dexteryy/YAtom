@@ -1,0 +1,43 @@
+"*":
+
+  editor:
+    invisibles: {}
+    zoomFontWhenCtrlScrolling: true
+    fontSize: 13
+    fontFamily: "Consolas"
+    showIndentGuide: true
+    
+  core:
+    themes: [
+      "one-light-ui"
+      "monokai-blackboard"
+    ]
+    
+  "autocomplete-plus":
+    defaultProvider: "Fuzzy"
+    backspaceTriggersAutocomplete: true
+    strictMatching: true
+    confirmCompletion: "enter"
+    maxVisibleSuggestions: 30
+    
+  pigments:
+    markerType: "dot"
+    
+  "keymap-disabler":
+    communityPackages: [
+      "*"
+    ]
+    communityPackagesException: [
+      "vim-mode"
+      "vim-surround"
+      "jumpy"
+      "toggle-quotes"
+      "svg-preview"
+    ]
+    bundledPackages: [
+      "symbols-view"
+      "bookmarks"
+      "bracket-matcher"
+      "git-diff"
+      "open-on-github"
+    ]

@@ -17,26 +17,6 @@
 #   'ctrl-p': 'core:move-down'
 #
 
-# config.cson
-# 
-# "keymap-disabler":
-#   communityPackages: [
-#     "*"
-#   ]
-#   communityPackagesException: [
-#     "vim-mode"
-#     "vim-surround"
-#     "jumpy"
-#     "toggle-quotes"
-#     "svg-preview"
-#   ]
-#   bundledPackages: [
-#     "symbols-view"
-#     "bookmarks"
-#     "git-diff"
-#     "open-on-github"
-#   ]
-
 # ==============================================================================
 
 '.platform-darwin atom-text-editor':
@@ -78,6 +58,8 @@
   
   'z M': 'editor:fold-all'
   'z R': 'editor:unfold-all'
+  
+  '%': 'bracket-matcher:go-to-matching-bracket'
   
   ', n t': 'tree-view:toggle'
   ', t b': 'symbols-tree-view:toggle'
