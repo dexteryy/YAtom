@@ -6,16 +6,6 @@
 #
 # You can create a new keybinding in this file by typing "key" and then hitting
 # tab.
-#
-# Here's an example taken from Atom's built-in keymap:
-#
-# '.editor':
-#   'enter': 'editor:newline'
-#
-# 'body':
-#   'ctrl-P': 'core:move-up'
-#   'ctrl-p': 'core:move-down'
-#
 
 # ==============================================================================
 
@@ -35,7 +25,7 @@
   'alt-cmd-v': 'unset!' # 'svg-preview:toggle'
   
 # ==============================================================================
-  
+
 'atom-text-editor.vim-mode:not(.insert-mode)':
   ':': 'command-palette:toggle'
   # 'cmd-alt-,': 'open ~/.atom/config.cson'
@@ -45,6 +35,7 @@
   '*': 'find-and-replace:use-selection-as-find-pattern'
   'n': 'find-and-replace:find-next'
   'shift-n': 'find-and-replace:find-previous'
+  ', space': 'find-and-replace:toggle'
   
   ', /': 'project-find:show'
   
@@ -70,6 +61,7 @@
   ', d l': 'link:open'
   ', d c': 'color-picker:open'
   ', d b': 'bezier-curve-editor:open'
+  ', d s': 'editor:log-cursor-scope'
   
   ', g s': 'git-plus:status'
   ', g a': 'git-plus:add'
@@ -83,6 +75,10 @@
   ', g b': 'open-on-github:blame'
   # 'alt-g r': 'open-on-github:branch-compare'
   
+'atom-text-editor.vim-mode:not(.insert-mode)[data-grammar~=js]':
+  ', d d': 'tern:definition'
+  ', d r': 'tern:references'
+  
 'atom-text-editor.vim-mode.visual-mode':
   'enter space': 'atom-alignment:align'
   'enter * space': 'atom-alignment:alignMultiple'
@@ -94,17 +90,24 @@
 
 # ==============================================================================
 
+'body':
+  'ctrl-j': 'core:move-down'
+  'ctrl-k': 'core:move-up'
+  
+'atom-text-editor':
+  'ctrl-k': 'core:move-up'
+  
 'atom-text-editor:not(.mini).vim-mode:not(.insert-mode)':
   'tab': 'editor:indent-selected-rows'
   'shift-tab': 'editor:outdent-selected-rows'
   
-'atom-text-editor:not(.mini).autocomplete-active':
+'atom-text-editor.vim-mode:not(.command-mode).autocomplete-active':
+  'escape': 'autocomplete-plus:cancel'
+  
+# 'atom-text-editor:not(.mini).autocomplete-active':
   # 'enter': 'core:move-down'
   # 'shift-enter': 'core:move-up'
-  # 'space': 'autocomplete-plus:confirm'
-  'ctrl-n': 'core:move-down'
-  'ctrl-p': 'core:move-up'
-  'space': 'autocomplete-plus:cancel'
+  # 'space': 'autocomplete-plus:cancel'
   
 # ==============================================================================
   
