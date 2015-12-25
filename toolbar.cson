@@ -1,0 +1,632 @@
+[
+  {
+    type: "url"
+    icon: "mark-github"
+    url: "https://github.com/dexteryy?tab=repositories"
+    tooltip: "My Github"
+  }
+  # {
+  #   type: "button"
+  #   icon: "issue-opened"
+  #   callback: "open-on-github:issue"
+  #   tooltip: "Open Github Issues"
+  #   style:
+  #     transform: "scale(1.2)"
+  # }
+  {
+    type: "button"
+    iconset: "icomoon"
+    icon: "stackoverflow"
+    callback: "ask-stack:ask-question"
+    tooltip: "Stack Overflow"
+  }
+  {
+    type: "url"
+    iconset: "devicon"
+    icon: "atom-original"
+    url: "https://atom.io/packages"
+    tooltip: "Atom Packages"
+  }
+
+  {
+    type: "spacer"
+  }
+  {
+    type: "button"
+    iconset: "icomoon"
+    icon: "folder-open"
+    callback: "application:add-project-folder"
+    tooltip: "Add Project Folder (cmd-shift-o)"
+  }
+  {
+    type: "button"
+    # iconset: "fa"
+    # icon: "plus-circle"
+    iconset: "icomoon"
+    icon: "box-add"
+    callback: "yo:yeoman"
+    tooltip: "Yo: Yeoman"
+  }
+  {
+    type: "button"
+    iconset: "icomoon"
+    icon: "hammer"
+    callback: "build:trigger"
+    tooltip: "Build (F4)"
+  }
+  {
+    type: "button"
+    iconset: "icomoon"
+    icon: "git"
+    callback: "git-plus:menu"
+    tooltip: "Git Plus: Menu"
+  }
+
+  # filetype
+  {
+    type: "spacer"
+    show: [
+      'json'
+      'es6'
+      'babel'
+      'jsx'
+      'flow'
+      'coffee'
+      'css'
+      'scss'
+      'sass'
+      'less'
+      'html'
+      'Markdown'
+      'rust'
+    ]
+  }
+
+  # json
+  {
+    type: "url"
+    icon: "package"
+    url: "https://docs.npmjs.com/"
+    tooltip: "NPM Docs"
+    show: [
+      'json'
+    ]
+    style:
+      color: "#CB3837"
+  }
+  {
+    type: "url"
+    iconset: "ion"
+    icon: "android-checkmark-circle"
+    url: "http://eslint.org/docs/rules/"
+    tooltip: "ESLint Rules"
+    show: [
+      'json'
+    ]
+    style:
+      color: "#6464E2"
+  }
+  {
+    type: "url"
+    iconset: "ion"
+    icon: "code"
+    url: "http://jscs.info/rules"
+    tooltip: "JSCS Rules"
+    show: [
+      'json'
+    ]
+    style:
+      color: "#EED95B"
+  }
+
+  # frontend
+  {
+    type: "url"
+    iconset: "fa"
+    icon: "codepen"
+    url: "http://codepen.io/dexteryy/pen/ZQpyGL"
+    tooltip: "CodePen"
+    show: [
+      'html'
+      'css'
+      'scss'
+      'sass'
+      'less'
+      'es6'
+      'babel'
+      'jsx'
+      'flow'
+      'coffee'
+    ]
+    style:
+      color: "#FF0088"
+  }
+
+
+  # js
+  {
+    type: "url"
+    iconset: "devicon"
+    icon: "html5-plain"
+    url: "https://html.spec.whatwg.org/multipage/"
+    tooltip: "HTML Living Stardand"
+    show: [
+      'html'
+      'es6'
+      'babel'
+      'jsx'
+      'flow'
+    ]
+    style:
+      color: "#E54D26"
+  }
+  {
+    type: "url"
+    iconset: "icomoon"
+    icon: "table2"
+    url: "http://kangax.github.io/compat-table/es6/"
+    tooltip: "ECMAScript compatibility table"
+    show: [
+      'es6'
+      'babel'
+      'jsx'
+      'flow'
+    ]
+    style:
+      color: "#EED95B"
+  }
+  {
+    type: "url"
+    iconset: "devicon"
+    icon: "javascript-plain"
+    url: "https://babeljs.io/docs/learn-es2015/"
+    tooltip: "Babel"
+    show: [
+      'es6'
+      'babel'
+      'jsx'
+      'flow'
+    ]
+    style:
+      color: "#EED95B"
+  }
+  {
+    type: "url"
+    iconset: "devicon"
+    icon: "gulp-plain"
+    url: "http://gulpjs.com/plugins/"
+    tooltip: "Gulp Plugins"
+    show: [
+      'es6'
+      'babel'
+      'jsx'
+      'flow'
+    ]
+    style:
+      color: "#CF4646"
+  }
+  {
+    type: "url"
+    iconset: "icomoon"
+    icon: "hipster2"
+    url: "http://yeoman.io/generators/"
+    tooltip: "Yeoman Generators"
+    show: [
+      'es6'
+      'babel'
+      'jsx'
+      'flow'
+    ]
+    style:
+      color: "#F4CF8C"
+  }
+  # {
+  #   type: "url"
+  #   iconset: "devicon"
+  #   icon: "nodejs-plain"
+  #   url: "https://docs.npmjs.com/"
+  #   tooltip: "NPM Docs"
+  #   show: [
+  #     'js'
+  #     'es6'
+  #     'babel'
+  #     'jsx'
+  #     'flow'
+  #   ]
+  #   style:
+  #     color: "#80BD01"
+  # }
+  {
+    type: "button"
+    icon: "bug"
+    callback: "node-debugger:start-resume"
+    tooltip: "Node Debugger: Start Resume (F10)"
+    show: [
+      'es6'
+      'babel'
+      'jsx'
+      'flow'
+    ]
+    style:
+      color: "#80BD01"
+  }
+  {
+    type: "button"
+    iconset: "fa"
+    icon: "ban"
+    callback: "node-debugger:stop"
+    tooltip: "Node Debugger: Stop (shift-F10)"
+    show: [
+      'es6'
+      'babel'
+      'jsx'
+      'flow'
+    ]
+    style:
+      color: "#80BD01"
+  }
+
+  # coffee
+  {
+    type: "url"
+    iconset: "devicon"
+    icon: "coffeescript-original"
+    url: "http://coffeescript.org/"
+    tooltip: "CoffeeScript Docs"
+    show: [
+      'coffee'
+    ]
+    style:
+      color: "#EED95B"
+  }
+
+  # css / scss / less
+  {
+    type: "url"
+    iconset: "devicon"
+    icon: "css3-plain"
+    url: "https://css-tricks.com/"
+    tooltip: "css-tricks"
+    show: [
+      'css'
+      'scss'
+      'sass'
+      'less'
+    ]
+    style:
+      color: "#E18728"
+  }
+  {
+    type: "url"
+    iconset: "devicon"
+    icon: "css3-plain"
+    url: "http://css3files.com/"
+    tooltip: "css-tricks"
+    show: [
+      'css'
+      'scss'
+      'sass'
+      'less'
+    ]
+    style:
+      color: "#3D8FC6"
+  }
+  {
+    type: "url"
+    iconset: "devicon"
+    icon: "sass-original"
+    url: "http://sass-lang.com/documentation/file.SASS_REFERENCE.html"
+    tooltip: "SCSS Docs"
+    show: [
+      'scss'
+      'sass'
+    ]
+    style:
+      color: "#C6538C"
+  }
+  {
+    type: "url"
+    iconset: "ion"
+    icon: "erlenmeyer-flask"
+    iconset: "icomoon"
+    icon: "lab"
+    url: "http://www.sassmeister.com/"
+    tooltip: "sassmeister"
+    show: [
+      'scss'
+      'sass'
+    ]
+    style:
+      color: "#C6538C"
+  }
+  {
+    type: "url"
+    iconset: "devicon"
+    icon: "less-plain-wordmark"
+    url: "http://lesscss.org/features/"
+    tooltip: "Less Docs"
+    show: [
+      'less'
+    ]
+    style:
+      color: "#467CD2"
+  }
+  {
+    type: "url"
+    iconset: "icomoon"
+    icon: "stats-dots"
+    url: "http://easings.net/"
+    tooltip: "Easing Cheat Sheet"
+    show: [
+      'css'
+      'scss'
+      'sass'
+      'less'
+    ]
+    style:
+      color: "#3D8FC6"
+  }
+  {
+    type: "url"
+    iconset: "icomoon"
+    icon: "stats-dots"
+    url: "http://cubic-bezier.com/"
+    tooltip: "cubic-bezier generator"
+    show: [
+      'css'
+      'scss'
+      'sass'
+      'less'
+    ]
+    style:
+      color: "#FF0088"
+  }
+  {
+    type: "url"
+    iconset: "fa"
+    icon: "cube"
+    url: "http://tridiv.com/app/"
+    tooltip: "Tridiv"
+    show: [
+      'css'
+      'scss'
+      'sass'
+      'less'
+    ]
+    style:
+      color: "#3D8FC6"
+  }
+  {
+    type: "url"
+    iconset: "fa"
+    icon: "video-camera"
+    url: "http://jeremyckahn.github.io/stylie/"
+    tooltip: "Stylie"
+    show: [
+      'css'
+      'scss'
+      'sass'
+      'less'
+    ]
+    style:
+      color: "#3D8FC6"
+  }
+
+  # html
+  {
+    type: "url"
+    iconset: "icomoon"
+    icon: "embed2"
+    url: "http://docs.emmet.io/abbreviations/"
+    tooltip: "Emmet"
+    show: [
+      'html'
+    ]
+    style:
+      color: "#7ACB16"
+  }
+  {
+    type: "button"
+    icon: "browser"
+    callback: "open-in-browser:open"
+    tooltip: "Open in browser"
+    show: [
+      'html'
+    ]
+    style:
+      color: "#3D8FC6"
+  }
+
+  # markdown
+  {
+    type: "button"
+    iconset: "fa"
+    icon: "book"
+    callback: "markdown-writer:open-cheat-sheet"
+    tooltip: "Markdown Writer: Open Cheat Sheet"
+    show: [
+      'Markdown'
+    ]
+    style:
+      color: "#ffe4b5"
+  }
+  {
+    type: "url"
+    iconset: "ion"
+    icon: "social-markdown"
+    url: "https://guides.github.com/features/mastering-markdown/"
+    tooltip: "Mastering Markdown"
+    show: [
+      'Markdown'
+    ]
+    style:
+      color: "#ffe4b5"
+  }
+  {
+    type: "url"
+    icon: "diff"
+    url: "http://johnmacfarlane.net/babelmark2/"
+    tooltip: "Babelmark"
+    show: [
+      'Markdown'
+    ]
+    style:
+      color: "#ffe4b5"
+  }
+  {
+    type: "button"
+    iconset: "fa"
+    icon: "eye"
+    callback: "markdown-preview:toggle"
+    tooltip: "Markdown Preview"
+    show: [
+      'Markdown'
+    ]
+    style:
+      color: "#ffe4b5"
+  }
+  # @TODO markdown-writer
+
+  # Rust
+  {
+    type: "url"
+    icon: "book"
+    url: "https://doc.rust-lang.org/stable/"
+    tooltip: "Rust Docs"
+    show: [
+      'rust'
+    ]
+    style:
+      color: "#E6AB37"
+  }
+  {
+    type: "url"
+    iconset: "ion"
+    icon: "cube"
+    url: "https://crates.io/"
+    tooltip: "Cargo"
+    show: [
+      'rust'
+    ]
+    style:
+      color: "#E6AB37"
+  }
+
+  {
+    type: "spacer"
+  }
+  {
+    type: "button"
+    icon: "repo"
+    callback: "open-on-github:repository"
+    tooltip: "Open Github Repository (, g g)"
+  }
+  {
+    type: "button"
+    icon: "history"
+    callback: "git-log:show"
+    tooltip: "Git Log (, g l)"
+  }
+  {
+    type: "button"
+    icon: "git-compare"
+    callback: "git-plus:log-current-file"
+    tooltip: "Git History (, g h)"
+  }
+  {
+    type: "button"
+    iconset: "fa"
+    icon: "user-secret"
+    callback: "open-on-github:blame"
+    tooltip: "Github Blame (, g b)"
+  }
+
+  {
+    type: "spacer"
+  }
+  {
+    type: "button"
+    # iconset: "fa"
+    # icon: "play-circle"
+    iconset: "icomoon"
+    icon: "file-play"
+    callback: "script:run-options"
+    tooltip: "Run (F2)"
+  }
+  {
+    type: "button"
+    iconset: "fa"
+    icon: "eye"
+    # icon: "file-code"
+    callback: "preview-plus:preview"
+    tooltip: "Preprocessor Preview (F3)"
+  }
+  {
+    type: "button"
+    iconset: "ion"
+    icon: "waterdrop"
+    callback: "atom-beautify:beautify-editor"
+    tooltip: "Beautify (enter b)"
+  }
+  {
+    type: "button"
+    iconset: "fa"
+    icon: "align-left"
+    callback: "resize-indent:halve"
+    tooltip: "Resize Indent: -"
+  }
+  {
+    type: "button"
+    iconset: "fa"
+    icon: "align-right"
+    callback: "resize-indent:double"
+    tooltip: "Resize Indent: +"
+  }
+  {
+    type: "button"
+    icon: "diff"
+    callback: 'split-diff:diffPanes'
+    tooltip: "Diff Panes (, c d)"
+  }
+
+  # {
+  #   type: "button"
+  #   iconset: "fa"
+  #   icon: "columns"
+  #   callback: "pane:split-right"
+  #   tooltip: "Split Vertical (ctrl-w v)"
+  # }
+  # {
+  #   type: "button"
+  #   iconset: "fa"
+  #   icon: "columns"
+  #   callback: "pane:split-down"
+  #   tooltip: "Split Horizontal (ctrl-w s)"
+  #   style:
+  #     transform: 'rotate(-90deg)'
+  # }
+
+  {
+    type: "spacer"
+  }
+  {
+    type: "button"
+    iconset: "fa"
+    icon: "refresh"
+    callback: "window:reload"
+    tooltip: "Reload"
+  }
+  {
+    type: "button"
+    icon: "tools"
+    callback: "window:toggle-dev-tools"
+    tooltip: "Devtools (cmd-alt-i)"
+  }
+  {
+    type: "button"
+    icon: "clock"
+    callback: "timecop:view"
+    tooltip: "Timecop"
+  }
+
+]

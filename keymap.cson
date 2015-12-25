@@ -9,82 +9,118 @@
 
 # ==============================================================================
 
-'.platform-darwin atom-text-editor':
-  'cmd-e': 'unset!' # 'find-and-replace:use-selection-as-find-pattern'
-'.platform-darwin atom-text-editor':
-  'cmd-g': 'unset!' # 'find-and-replace:find-next'
-'.platform-darwin atom-text-editor':
-  'shift-cmd-G': 'unset!' # 'find-and-replace:find-previous'
-  
+'.platform-darwin':
+  'cmd-t': 'unset!' # 'fuzzy-finder:toggle-file-finder'
+
 # ==============================================================================
-  
+
 'atom-workspace atom-text-editor:not(.mini)':
   'shift-enter': 'unset!' # 'jumpy:toggle'
 
+'.platform-darwin atom-workspace':
+  'shift-cmd-C': 'unset!' # 'color-picker:open'
+
 'atom-workspace':
   'alt-cmd-v': 'unset!' # 'svg-preview:toggle'
-  
+
 # ==============================================================================
 
 'atom-text-editor.vim-mode:not(.insert-mode)':
   ':': 'command-palette:toggle'
   # 'cmd-alt-,': 'open ~/.atom/config.cson'
   # 'cmd-alt-.': 'open ~/.atom/keymap.cson'
-  
+
   '/': 'find-and-replace:show'
   '*': 'find-and-replace:use-selection-as-find-pattern'
   'n': 'find-and-replace:find-next'
   'shift-n': 'find-and-replace:find-previous'
   ', space': 'find-and-replace:toggle'
-  
+
   ', /': 'project-find:show'
-  
+
   ', n space': 'editor:toggle-line-comments'
   ', n m': 'block-comment:toggle'
-  
+
   ', m m': 'bookmarks:toggle-bookmark'
   ', m h': 'bookmarks:toggle-bookmark'
   ', m a': 'bookmarks:clear-bookmarks'
   ', m v': 'bookmarks:view-all'
-  
+
   'z M': 'editor:fold-all'
   'z R': 'editor:unfold-all'
-  
-  '%': 'bracket-matcher:go-to-matching-bracket'
-  
+
+  '%': 'vim-mode:bracket-matching-motion'
+
   ', n t': 'tree-view:toggle'
   ', t b': 'symbols-tree-view:toggle'
   ', t l': 'todo-show:find-in-project'
-  
+
   ', d f': 'dash:shortcut'
   ', d g': 'dash:shortcut-alt'
   ', d l': 'link:open'
   ', d c': 'color-picker:open'
   ', d b': 'bezier-curve-editor:open'
   ', d s': 'editor:log-cursor-scope'
-  
-  ', g s': 'git-plus:status'
-  ', g a': 'git-plus:add'
+
   ', g l': 'git-log:show'
   ', g h': 'git-plus:log-current-file'
-  # ', g d': 'git-plus:diff'
-  ', g v': 'git-difftool:diff-project'
+  ', g s': 'git-plus:status'
+  ', g a': 'git-plus:add'
+  # ', g a': 'git-plus:add-and-commit'
+  # ', g a': 'git-plus:add-all-and-commit'
+  # ', g a': 'git-plus:add-all-commit-and-push'
+  ', g d': 'git-history:show-file-history'
+  # ', g v': 'git-difftool:diff-project'
+  ', g b': 'git-blame:toggle'
+  # ', g b': 'open-on-github:blame'
   ', g f': 'open-on-github:file'
-  # 'alt-g h': 'open-on-github:history'
   ', g i': 'open-on-github:issues'
-  ', g b': 'open-on-github:blame'
+  ', g g': 'open-on-github:repository'
+  ', g c': 'open-on-github:copy-url'
+  # 'alt-g h': 'open-on-github:history'
   # 'alt-g r': 'open-on-github:branch-compare'
-  
+
+  ', c d': 'split-diff:diffPanes'
+  ', c x': 'split-diff:disable'
+
+  ', p l': 'project-manager:list-projects'
+  ', p e': 'project-manager:edit-projects'
+  ', p s': 'project-manager:save-project'
+
+'atom-text-editor[data-grammar~=js]':
+  'f9': 'node-debugger:toggle-breakpoint'
+  'f10': 'node-debugger:start-resume'
+  'shift-f10': 'node-debugger:stop'
+  'ctrl-f0': 'node-debugger:start-active-file'
+  'f11': 'node-debugger:step-next'
+  'f12': 'node-debugger:step-in'
+  'shift-f12': 'node-debugger:step-out'
+
 'atom-text-editor.vim-mode:not(.insert-mode)[data-grammar~=js]':
   ', d d': 'tern:definition'
   ', d r': 'tern:references'
-  
+
+'atom-text-editor.vim-mode:not(.insert-mode)[data-grammar~=rust]':
+  ', d d': 'racer:find-definition'
+
 'atom-text-editor.vim-mode.visual-mode':
-  'enter space': 'atom-alignment:align'
+  'enter space': 'aligner:align'
+  'enter 0 space': 'atom-alignment:align'
   'enter * space': 'atom-alignment:alignMultiple'
   'enter b': 'atom-beautify:beautify-editor'
+
+  ', c m': 'change-case:camel'    # "getDoc"
+  ', c p': 'change-case:pascal'   # "GetDoc"
+  ', c c': 'change-case:constant' # "GET_DOC"
+  ', c _': 'change-case:snake'    # "get_doc"
+  ', c -': 'change-case:param'    # "get-doc"
+  ', c /': 'change-case:path'     # "get/doc"
+  ', c .': 'change-case:dot'      # "get.doc"
+  ', c s': 'change-case:sentence' # "get doc"
+  ', c t': 'change-case:title'    # "Get doc"
+
   'z f': 'editor:fold-selection'
-  
+
 'atom-text-editor:not(.mini).vim-mode:not(.insert-mode):not(.jumpy-jump-mode)':
   ';': 'jumpy:toggle'
 
@@ -93,49 +129,87 @@
 'body':
   'ctrl-j': 'core:move-down'
   'ctrl-k': 'core:move-up'
-  
+
 'atom-text-editor':
   'ctrl-k': 'core:move-up'
-  
+
 'atom-text-editor:not(.mini).vim-mode:not(.insert-mode)':
   'tab': 'editor:indent-selected-rows'
   'shift-tab': 'editor:outdent-selected-rows'
-  
+
 'atom-text-editor.vim-mode:not(.command-mode).autocomplete-active':
   'escape': 'autocomplete-plus:cancel'
-  
+
 # 'atom-text-editor:not(.mini).autocomplete-active':
   # 'enter': 'core:move-down'
   # 'shift-enter': 'core:move-up'
   # 'space': 'autocomplete-plus:cancel'
-  
+
 # ==============================================================================
-  
+
+'.platform-darwin':
+  'cmd-f': 'find-and-replace:show'
+  'cmd-shift-f': 'project-find:show'
+  'alt-cmd-f': 'find-and-replace:show-replace'
+
+'.platform-darwin .find-and-replace':
+  'cmd-enter': 'find-and-replace:confirm'
+  'alt-enter': 'find-and-replace:find-all'
+
+'.platform-darwin .find-and-replace .replace-container atom-text-editor':
+  'cmd-enter': 'find-and-replace:replace-all'
+
+'.find-and-replace, .project-find, .project-find .results-view':
+  'tab': 'find-and-replace:focus-next'
+  'shift-tab': 'find-and-replace:focus-previous'
+
+# ==============================================================================
+
+'body.platform-darwin':
+  'cmd-shift-h': 'git-plus:menu'
+
 'body.platform-darwin':
   'cmd-o': 'advanced-open-file:toggle'
 
-'.platform-darwin atom-workspace':
-  'cmd-alt-n': 'advanced-new-file:toggle'
-  
+'.advanced-open-file atom-text-editor':
+  'tab': 'advanced-open-file:autocomplete'
+  'ctrl-p': 'advanced-open-file:move-cursor-up'
+  'ctrl-n': 'advanced-open-file:move-cursor-down'
+  'ctrl-j': 'advanced-open-file:move-cursor-up'
+  'ctrl-k': 'advanced-open-file:move-cursor-down'
+
 '.platform-darwin atom-workspace':
   'cmd-t': 'recent-files-fuzzy-finder:toggle-finder'
-  
-'.platform-darwin':
-  'cmd-shift-h': 'git-plus:menu'
-  
+
+'.platform-darwin atom-workspace':
+  'ctrl-`': 'terminal-plus:toggle'
+
+'.platform-darwin .terminal-plus .terminal':
+  'cmd-c': 'terminal-plus:copy'
+  'cmd-v': 'terminal-plus:paste'
+  'cmd-w': 'terminal-plus:close'
+  'cmd-n': 'terminal-plus:new'
+  'cmd-}': 'terminal-plus:next'
+  'cmd-{': 'terminal-plus:prev'
+
 '.platform-darwin atom-text-editor':
-  'cmd-i': 'script:run'
-  
+  'f6': 'build:toggle-panel'
+
+  'f5': 'linter:togglePanel'
+
+  'f4': 'build:trigger'
+
+  'f3': 'preview-plus:preview'
+
+  'f2': 'script:run'
+  'shift-f2': 'script:close-view'
+  'alt-f2': 'script:run-options'
+  'ctrl-f2': 'script:kill-process'
+
+  'f1': 'help:atom-docs'
+
 '.platform-darwin atom-text-editor:not(.mini)':
-  'cmd-shift-/': 'block-comment:toggle'
+  'cmd-?': 'block-comment:toggle'
 
 'atom-text-editor[data-grammar="text html basic"]:not([mini]), atom-text-editor[data-grammar~="jade"]:not([mini])':
-  'cmd-shift-e': 'emmet:expand-abbreviation'
-  # 'tab': 'emmet:expand-abbreviation-with-tab'
-  
-# '.platform-darwin atom-workspace':
-#   'ctrl-shift-O': 'link:open'
-
-# 'atom-text-editor':
-#   'ctrl-h': 'dash:shortcut'
-#   'ctrl-alt-h': 'dash:shortcut-alt'
+  'cmd-e': 'emmet:expand-abbreviation'
