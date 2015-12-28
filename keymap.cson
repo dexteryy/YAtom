@@ -83,9 +83,12 @@
   ', c d': 'split-diff:diffPanes'
   ', c x': 'split-diff:disable'
 
-  ', p l': 'project-manager:list-projects'
-  ', p e': 'project-manager:edit-projects'
-  ', p s': 'project-manager:save-project'
+  ', s l': 'project-manager:list-projects'
+  ', s e': 'project-manager:edit-projects'
+  ', s s': 'project-manager:save-project'
+
+  ', p l': 'git-projects:toggle'
+  ', p a': 'git-projects:toggle-add'
 
 'atom-text-editor[data-grammar~=js]':
   'f9': 'node-debugger:toggle-breakpoint'
@@ -147,6 +150,9 @@
 
 # ==============================================================================
 
+'atom-text-editor':
+  'cmd-shift-a': 'core:select-all'
+
 '.platform-darwin':
   'cmd-f': 'find-and-replace:show'
   'cmd-shift-f': 'project-find:show'
@@ -180,6 +186,10 @@
 
 '.platform-darwin atom-workspace':
   'cmd-t': 'recent-files-fuzzy-finder:toggle-finder'
+
+'body.platform-darwin':
+  'cmd-g': 'git-projects:toggle-add'
+  'cmd-shift-g': 'git-projects:toggle'
 
 '.platform-darwin atom-workspace':
   'ctrl-`': 'terminal-plus:toggle'

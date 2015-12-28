@@ -1,43 +1,389 @@
 "*":
 
+  welcome:
+    showOnStartup: false
+
   editor:
     invisibles: {}
     zoomFontWhenCtrlScrolling: true
-    fontSize: 13
-    fontFamily: "Consolas"
-    showIndentGuide: true
-    
+    fontFamily: "Hack"
+
   core:
+    ignoredNames: [
+      ".git"
+      ".svn"
+      ".DS_Store"
+    ]
+    disabledPackages: [
+      "ex-mode"
+      "easy-motion"
+      "linter-tidy"
+      "linter-jshint"
+      "block-cursor"
+      "travis-ci-status"
+      "go-plus"
+      "trailing-spaces"
+      "Stylus"
+      "colorful-json"
+      "linter-stylint"
+      "autocomplete-ruby"
+      "keymap-disabler"
+      "expose"
+      "git-difftool"
+      "git-control"
+      "activate-power-mode"
+      "language-latex"
+      "language-r"
+      "minimap-autohide"
+      "minimap-pigments"
+      "preview"
+      "relative-line-numbers"
+      "linter-tslint"
+      "atom-typescript"
+      "hyperclick"
+      "js-hyperclick"
+      "nuclide-url-hyperclick"
+      "nuclide-flow"
+      "nuclide-type-hint"
+      "highlight-column"
+      "python-tools"
+      "json-schema"
+      "asciidoc-preview"
+      "linter-csslint"
+    ]
     themes: [
-      "one-light-ui"
+      "atom-dark-ui"
       "monokai-blackboard"
     ]
-    
+    packagesWithKeymapsDisabled: [
+      "git-diff"
+      "grammar-selector"
+      "notifications"
+      "autoflow"
+      "python-tools"
+      "bookmarks"
+      "dev-live-reload"
+      "encoding-selector"
+      "link"
+      "markdown-preview"
+      "styleguide"
+      "spell-check"
+      "open-on-github"
+      "advanced-open-file"
+      "ask-stack"
+      "atom-alignment"
+      "activate-power-mode"
+      "atom-beautify"
+      "autocomplete-python"
+      "bezier-curve-editor"
+      "block-comment"
+      "color-picker"
+      "dash"
+      "emmet"
+      "expose"
+      "figlet"
+      "gist-it"
+      "git-log"
+      "git-blame"
+      "git-history"
+      "git-difftool"
+      "git-control"
+      "gulp-control"
+      "highlight-line"
+      "highlight-selected"
+      "linter"
+      "merge-conflicts"
+      "node-debugger"
+      "preview-plus"
+      "recent-files-fuzzy-finder"
+      "regex-railroad-diagram"
+      "resize-indent"
+      "symbols-tree-view"
+      "todo-show"
+      "project-manager"
+      "tool-bar"
+      "bracket-matcher"
+      "git-plus"
+      "find-and-replace"
+      "build"
+      "terminal-plus"
+      "aligner"
+      "compare-files"
+      "split-diff"
+      "symbols-view"
+      "change-case"
+      "asciidoc-preview"
+      "open-in-browser"
+      "atom-live-server"
+      "script"
+      "browser-plus"
+      "git-projects"
+    ]
+
+  minimap:
+    adjustMinimapWidthToSoftWrap: false
+    plugins:
+      "highlight-selected": true
+      "git-diff": true
+      "minimap-autohide": false
+      bookmarks: true
+      selection: true
+      "find-and-replace": true
+      "minimap-hide": true
+      codeglance: true
+      pigments: false
+      "split-diff": true
+
+  linter:
+    statusBar: "Show all errors"
+    showErrorTabFile: false
+    showErrorTabProject: false
+    showErrorInline: false
+
+  emmet:
+    useEmmetComments: false
+
+  dash:
+    grammars:
+      JavaScript: [
+        "node"
+        "express"
+        "sails"
+        "hapi"
+        "chai"
+        "sinon"
+        "jasmine"
+        "jsdoc"
+        "moment"
+        "mori"
+        "baconjs"
+        "ampersandjs"
+        "relay"
+        "react"
+        "jq"
+        "handlebars"
+        "ionic"
+        "reactnative"
+        "threejs"
+        "d3"
+        "b2"
+        "phaser"
+        "electron"
+        "chrome"
+        "atom"
+        "http"
+        "httpheader"
+        "mime"
+        "rfc"
+        "mongodb"
+        "mongoose"
+        "pouchdb"
+        "redis"
+        "awsjs"
+      ]
+      CoffeeScript: [
+        "bluebird"
+        "react"
+        "jq"
+        "atom"
+        "awsjs"
+      ]
+      TypeScript: [
+        "typescript"
+      ]
+      CSS: [
+        "color"
+      ]
+      SCSS: [
+        "scss"
+        "susy"
+        "semantic"
+        "color"
+        "media"
+        "ionic"
+      ]
+      LESS: [
+        "color"
+        "atom"
+      ]
+      HTML: [
+        "emmet"
+        "htmle"
+        "ionic"
+        "semantic"
+      ]
+      Python: [
+        "py"
+      ]
+      Swift: [
+        "swift"
+        "ios"
+        "osx"
+      ]
+      "Objective-C": [
+        "objc"
+        "ios"
+        "osx"
+      ]
+      "Shell Scripts": [
+        "nginx"
+        "ufp"
+      ]
+    filenames:
+      "package.json": [
+        "npm"
+      ]
+      Dockerfile: [
+        "docker"
+      ]
+      Vagrantfile: [
+        "vagrant"
+      ]
+
+  "language-babel":
+    transpileOnSave: false
+
+  "atom-beautify":
+    analytics: false
+    beautifyEntireFileOnSave: false
+    js_end_with_comma: true
+    js_space_after_anon_function: true
+
+  tabs:
+    usePreviewTabs: true
+
   "autocomplete-plus":
     defaultProvider: "Fuzzy"
     backspaceTriggersAutocomplete: true
     strictMatching: true
     confirmCompletion: "enter"
     maxVisibleSuggestions: 30
-    
+    autoActivationDelay: 500
+
+  "fuzzy-finder":
+    preserveLastSearch: true
+
+  "git-diff":
+    showIconsInEditorGutter: true
+
+  "git-log":
+    fontScale: 0.9
+
+  "git-history":
+    showDiff: false
+
+  "git-blame":
+    ignoreWhiteSpaceDiffs: true
+
   pigments:
+    autocompleteScopes: [
+      ".yss"
+    ]
     markerType: "dot"
-    
-  "keymap-disabler":
-    communityPackages: [
-      "*"
-    ]
-    communityPackagesException: [
-      "vim-mode"
-      "vim-surround"
-      "jumpy"
-      "toggle-quotes"
-      "svg-preview"
-    ]
-    bundledPackages: [
-      "symbols-view"
-      "bookmarks"
-      "bracket-matcher"
-      "git-diff"
-      "open-on-github"
-    ]
+    groupPaletteColors: "by file"
+    sortPaletteColors: "by color"
+
+  "highlight-selected":
+    onlyHighlightWholeWords: false
+
+  "highlight-line":
+    enableSelectionBorder: true
+
+  "todo-show":
+    sortBy: "File"
+
+  whitespace:
+    ignoreWhitespaceOnCurrentLine: false
+
+  "symbols-tree-view":
+    autoHide: true
+    autoToggle: true
+
+  jumpy:
+    highContrast: true
+
+  "highlight-column":
+    lineMode: true
+
+  "block-cursor":
+    cursorType: "underline"
+
+  "atom-ternjs":
+    lint: false
+    useSnippets: true
+
+  "markdown-writer":
+    siteEngine: "hexo"
+
+  "trailing-spaces":
+    enableForCursorLines: true
+
+  "recent-files-fuzzy-finder":
+    restoreSession: true
+
+  "node-debugger":
+    nodePath: "/usr/local/bin/node"
+
+  "gist-it":
+    newGistsDefaultToPrivate: true
+
+  "relative-line-numbers":
+    showNormalLineNumbers: false
+
+  "find-and-replace":
+    focusEditorAfterSearch: true
+    openProjectFindResultsInRightPane: true
+    scrollToResultOnLiveSearch: true
+
+  "markdown-preview":
+    useGitHubStyle: true
+
+  "advanced-open-file":
+    createDirectories: true
+
+  "activate-power-mode":
+    particles:
+      size: {}
+      spawnCount: {}
+      totalCount: {}
+    screenShake:
+      enabled: false
+
+  "color-picker":
+    uppercaseColorValues: true
+
+  "indentation-indicator":
+    indicatorPosition: "right"
+
+  "minimap-selection":
+    highlightCursorsLines: true
+
+  "preview-plus":
+    css: "SCSS"
+    cjsx: "JavaScript"
+    html: "browser"
+
+  "file-watcher":
+    promptWhenFileHasChangedOnDisk: false
+
+  "terminal-plus":
+    core: {}
+    style:
+      theme: "homebrew"
+      animationSpeed: 2
+      fontFamily: "Anonymous Pro"
+
+  "split-diff":
+    ignoreWhitespace: true
+
+  "tool-bar":
+    iconSize: "16px"
+    position: "Left"
+
+  "browser-plus":
+    currentFile: false
+    homepage: "browser-plus://history"
+
+  "git-projects":
+    ignoredPatterns: "node_modules;.git;bower_components;.statictmp"
+    maxDepth: 1

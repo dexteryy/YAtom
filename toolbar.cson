@@ -427,9 +427,21 @@
   }
   {
     type: "button"
-    icon: "browser"
+    iconset: "fa"
+    icon: "internet-explorer"
     callback: "open-in-browser:open"
     tooltip: "Open in browser"
+    show: [
+      'html'
+    ]
+    style:
+      color: "#3D8FC6"
+  }
+  {
+    type: "button"
+    icon: "browser"
+    callback: "browser-plus:openCurrent"
+    tooltip: "Browser Plus: OpenCurrent"
     show: [
       'html'
     ]
@@ -587,6 +599,12 @@
     icon: "diff"
     callback: 'split-diff:diffPanes'
     tooltip: "Diff Panes (, c d)"
+  }
+  {
+    type: "button"
+    icon: "browser"
+    callback: "browser-plus:open"
+    tooltip: "Browser Plus: Open"
   }
 
   # {
