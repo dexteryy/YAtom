@@ -138,7 +138,7 @@ Community Packages:
 - https://atom.io/packages/highlight-column (A)
 - https://atom.io/packages/highlight-selected (A)
 - https://atom.io/packages/indentation-indicator (A)
-- https://atom.io/packages/indent-guide-improved (A)
+- ~~https://atom.io/packages/indent-guide-improved (A)~~
 - https://atom.io/packages/relative-line-numbers (A)
 - https://atom.io/packages/git-diff (A)
 
@@ -160,6 +160,8 @@ Community Packages:
 - https://atom.io/packages/git-log (C / K: [,g]l)
 - https://atom.io/packages/git-blame (K: [,g]b / C)
 - https://atom.io/packages/git-history (K: [,g]d / C)
+- ~~https://atom.io/packages/git-difftool (K: [,g]v / C)~~
+- ~~https://atom.io/packages/git-control (C)~~
 
 -----------------------------------
 
