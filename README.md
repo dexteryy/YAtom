@@ -1,4 +1,8 @@
 
+Screenshot:
+
+![Atom screenhhost](https://raw.github.com/dexteryy/dot-atom/master/screenshot.png)
+
 Core Packages:
 
 -----------------------------------
@@ -96,7 +100,7 @@ Community Packages:
 
 - https://atom.io/packages/vim-mode (A / K: [ctrl-w]v/s, [ctrl-w]h/l/j/k, [ctrl-w]w/p, [m/`], y/p, [“]ay/p, u, ., +/-)
     - https://github.com/atom/vim-mode/blob/master/keymaps/vim-mode.cson
-- https://atom.io/packages/jumpy (K: ;)
+- https://atom.io/packages/jumpy (K: [;]f)
 
 -----------------------------------
 
@@ -145,7 +149,7 @@ Community Packages:
 -----------------------------------
 
 - https://atom.io/packages/split-diff (K: [,c]d/x / C)
-- https://atom.io/packages/compare-files (C)
+- ~~https://atom.io/packages/compare-files (C)~~
 - https://atom.io/packages/stacktrace (C)
 - https://atom.io/packages/asciidoc-preview (C)
 - https://atom.io/packages/svg-preview (C)

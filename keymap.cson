@@ -125,8 +125,8 @@
   'z f': 'editor:fold-selection'
 
 'atom-text-editor:not(.mini).vim-mode:not(.insert-mode):not(.jumpy-jump-mode)':
-  # ';': 'jumpy:toggle'
-  'f': 'jumpy:toggle'
+  '; f': 'jumpy:toggle'
+  '; w': 'jumpy:toggle'
 
 # ==============================================================================
 
@@ -175,7 +175,9 @@
 'body.platform-darwin':
   'cmd-shift-h': 'git-plus:menu'
 
-'body.platform-darwin':
+  'cmd-g': 'git-projects:toggle-add'
+  'cmd-shift-g': 'git-projects:toggle'
+
   'cmd-o': 'advanced-open-file:toggle'
 
 '.advanced-open-file atom-text-editor':
@@ -187,10 +189,6 @@
 
 '.platform-darwin atom-workspace':
   'cmd-t': 'recent-files-fuzzy-finder:toggle-finder'
-
-'body.platform-darwin':
-  'cmd-g': 'git-projects:toggle-add'
-  'cmd-shift-g': 'git-projects:toggle'
 
 '.platform-darwin atom-workspace':
   'ctrl-`': 'terminal-plus:toggle'
@@ -220,7 +218,7 @@
   'f1': 'help:atom-docs'
 
 '.platform-darwin atom-text-editor:not(.mini)':
-  'cmd-?': 'block-comment:toggle'
+  'cmd-ctrl-/': 'block-comment:toggle'
 
 'atom-text-editor[data-grammar="text html basic"]:not([mini]), atom-text-editor[data-grammar~="jade"]:not([mini])':
   'cmd-e': 'emmet:expand-abbreviation'

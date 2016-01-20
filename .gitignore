@@ -2,6 +2,9 @@ packages/
 .apm/
 .node-gyp/
 .tern-project
+.git-history/
 compile-cache/
 storage/
+blob-store/
 config.cson
+projects.cson
