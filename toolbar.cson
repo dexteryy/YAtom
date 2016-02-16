@@ -67,6 +67,7 @@
     type: "spacer"
     show: [
       'json'
+      'yaml'
       'es6'
       'babel'
       'jsx'
@@ -96,12 +97,24 @@
   }
   {
     type: "url"
+    iconset: "icomoon"
+    icon: "hammer"
+    url: "http://babeljs.io/docs/usage/options/"
+    tooltip: "Babel Options"
+    show: [
+      'json'
+    ]
+    style:
+      color: "#EED95B"
+  }
+  {
+    type: "url"
     iconset: "ion"
     icon: "android-checkmark-circle"
     url: "http://eslint.org/docs/rules/"
     tooltip: "ESLint Rules"
     show: [
-      'json'
+      'yaml'
     ]
     style:
       color: "#6464E2"
@@ -109,7 +122,7 @@
   {
     type: "url"
     iconset: "ion"
-    icon: "code"
+    icon: "android-checkmark-circle"
     url: "http://jscs.info/rules"
     tooltip: "JSCS Rules"
     show: [
@@ -117,6 +130,30 @@
     ]
     style:
       color: "#EED95B"
+  }
+  {
+    type: "url"
+    iconset: "ion"
+    icon: "android-checkmark-circle"
+    url: "http://stylelint.io/user-guide/rules/"
+    tooltip: "StyleLint Rules"
+    show: [
+      'yaml'
+    ]
+    style:
+      color: "#EED95B"
+  }
+  {
+    type: "url"
+    iconset: "ion"
+    icon: "android-checkmark-circle"
+    url: "https://github.com/sasstools/sass-lint/tree/develop/docs/rules"
+    tooltip: "SASS-Lint Rules"
+    show: [
+      'yaml'
+    ]
+    style:
+      color: "#FF0088"
   }
 
   # frontend
@@ -162,6 +199,22 @@
   }
   {
     type: "url"
+    iconset: "devicon"
+    icon: "nodejs-plain"
+    url: "https://nodejs.org/api/"
+    tooltip: "Node.js Docs"
+    show: [
+      'js'
+      'es6'
+      'babel'
+      'jsx'
+      'flow'
+    ]
+    style:
+      color: "#80BD01"
+  }
+  {
+    type: "url"
     iconset: "icomoon"
     icon: "table2"
     url: "http://kangax.github.io/compat-table/es6/"
@@ -179,8 +232,8 @@
     type: "url"
     iconset: "devicon"
     icon: "javascript-plain"
-    url: "https://babeljs.io/docs/learn-es2015/"
-    tooltip: "Babel"
+    url: "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference"
+    tooltip: "MDN JavaScript Reference"
     show: [
       'es6'
       'babel'
@@ -188,7 +241,37 @@
       'flow'
     ]
     style:
-      color: "#EED95B"
+      color: "#0095dd"
+  }
+  {
+    type: "url"
+    iconset: "devicon"
+    icon: "javascript-plain"
+    url: "http://exploringjs.com/es6/"
+    tooltip: "Exploring ES6"
+    show: [
+      'es6'
+      'babel'
+      'jsx'
+      'flow'
+    ]
+    style:
+      color: "#DDCCA1"
+  }
+  {
+    type: "url"
+    iconset: "ion"
+    icon: "cube"
+    url: "http://webpack.github.io/docs/"
+    tooltip: "Webpack"
+    show: [
+      'es6'
+      'babel'
+      'jsx'
+      'flow'
+    ]
+    style:
+      color: "#6C93D6"
   }
   {
     type: "url"
@@ -205,36 +288,20 @@
     style:
       color: "#CF4646"
   }
-  {
-    type: "url"
-    iconset: "icomoon"
-    icon: "hipster2"
-    url: "http://yeoman.io/generators/"
-    tooltip: "Yeoman Generators"
-    show: [
-      'es6'
-      'babel'
-      'jsx'
-      'flow'
-    ]
-    style:
-      color: "#F4CF8C"
-  }
   # {
   #   type: "url"
-  #   iconset: "devicon"
-  #   icon: "nodejs-plain"
-  #   url: "https://docs.npmjs.com/"
-  #   tooltip: "NPM Docs"
+  #   iconset: "icomoon"
+  #   icon: "hipster2"
+  #   url: "http://yeoman.io/generators/"
+  #   tooltip: "Yeoman Generators"
   #   show: [
-  #     'js'
   #     'es6'
   #     'babel'
   #     'jsx'
   #     'flow'
   #   ]
   #   style:
-  #     color: "#80BD01"
+  #     color: "#F4CF8C"
   # }
   {
     type: "button"
@@ -301,7 +368,7 @@
     iconset: "devicon"
     icon: "css3-plain"
     url: "http://css3files.com/"
-    tooltip: "css-tricks"
+    tooltip: "css3files"
     show: [
       'css'
       'scss'
@@ -310,6 +377,21 @@
     ]
     style:
       color: "#3D8FC6"
+  }
+  {
+    type: "url"
+    iconset: "devicon"
+    icon: "css3-plain"
+    url: "http://cssnext.io/features/"
+    tooltip: "postcss-cssnext features"
+    show: [
+      'css'
+      'scss'
+      'sass'
+      'less'
+    ]
+    style:
+      color: "#fff"
   }
   {
     type: "url"
@@ -326,8 +408,6 @@
   }
   {
     type: "url"
-    iconset: "ion"
-    icon: "erlenmeyer-flask"
     iconset: "icomoon"
     icon: "lab"
     url: "http://www.sassmeister.com/"

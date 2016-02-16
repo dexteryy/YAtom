@@ -124,6 +124,7 @@ Community Packages:
 - https://atom.io/packages/sublime-style-column-selection (K+M: alt-cursor)
 - https://atom.io/packages/atom-beautify (RM / C / K: [enter]b)
 - https://atom.io/packages/autoclose-html (A)
+- https://atom.io/packages/atom-css-comb (K: [enter]b)
 - https://atom.io/packages/aligner (K: [enter]space / C)
 - https://atom.io/packages/atom-alignment (C / K: [enter]0space, [enter]*space)
 - https://atom.io/packages/change-case (K: [,c]m/p/c/_/-///./s/t)
@@ -214,17 +215,14 @@ Community Packages:
 - https://atom.io/packages/linter-tslint
 - https://atom.io/packages/linter-coffeelint
     - http://www.coffeelint.org/
-- https://atom.io/packages/linter-csslint
-    - http://csslint.net/
-- https://atom.io/packages/linter-scss-lint
-    - gem install scss_lint
-    - https://github.com/brigade/scss-lint
+- https://atom.io/packages/linter-stylelint
+- https://atom.io/packages/linter-sass-lint
 - https://atom.io/packages/linter-less
 - https://atom.io/packages/linter-htmlhint
+- https://atom.io/packages/linter-tidy
 
 -----------------------------------
 
-- http://htmlhint.com/
 - https://atom.io/packages/linter-js-yaml
 - https://atom.io/packages/linter-xmllint
 - https://atom.io/packages/linter-rust
@@ -240,7 +238,6 @@ Community Packages:
 - https://atom.io/packages/language-babel
 - https://atom.io/packages/atom-typescript
 - https://atom.io/packages/react
-- https://atom.io/packages/angularjs
 - https://atom.io/packages/racer
 - https://atom.io/packages/python-tools
 - https://atom.io/packages/language-lua

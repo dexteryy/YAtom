@@ -8,3 +8,4 @@ storage/
 blob-store/
 config.cson
 projects.cson
+snippets.cson

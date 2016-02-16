@@ -13,6 +13,9 @@
     beautifyEntireFileOnSave: false
     js_end_with_comma: true
     js_space_after_anon_function: true
+  "atom-css-comb":
+    projectConfigs: ".csscomb"
+    readyMadeConfigs: "csscomb"
   "atom-ternjs":
     lint: false
     useSnippets: true
@@ -28,9 +31,14 @@
   "browser-plus":
     currentFile: false
     homepage: "browser-plus://history"
+  build:
+    notificationOnRefresh: true
+    scrollOnError: true
   "color-picker":
     uppercaseColorValues: true
   core:
+    closeEmptyWindows: false
+    destroyEmptyPanes: false
     disabledPackages: [
     ]
     ignoredNames: [
@@ -88,7 +96,6 @@
       "bracket-matcher"
       "git-plus"
       "find-and-replace"
-      "build"
       "terminal-plus"
       "aligner"
       "compare-files"
@@ -101,6 +108,7 @@
       "script"
       "browser-plus"
       "git-projects"
+      "build"
     ]
     themes: [
       "atom-dark-ui"
@@ -114,98 +122,268 @@
       Vagrantfile: [
         "vagrant"
       ]
+      "gulpfile.babel.js": [
+        "gulp"
+      ]
+      "gulpfile.js": [
+        "gulp"
+      ]
+      haproxy: [
+        "haproxy"
+      ]
+      "haproxy.cfg": [
+        "haproxy"
+      ]
       "package.json": [
         "npm"
+        "license"
       ]
     grammars:
+      "Babel ES6 JavaScript": [
+        "express"
+        "lodash"
+        "jq"
+        "d3"
+        "js"
+        "mongodb"
+        "node"
+        "redis"
+        "mysql"
+        "phonegap"
+        "svg"
+        "chai"
+        "zepto"
+        "cordova"
+        "http"
+        "regex"
+        "mongoose"
+        "sinon"
+        "moment"
+        "jsdoc"
+        "mori"
+        "elasticsearch"
+        "chrome"
+        "b2"
+        "reactnative"
+        "httpheader"
+        "threejs"
+        "atom"
+        "hapi"
+        "handlebars"
+        "react"
+        "gulp"
+        "ascii"
+        "mime"
+        "sails"
+        "ufp"
+        "electron"
+        "phaser"
+        "replay"
+        "rfc"
+        "mocha"
+        "keybase"
+        "flow"
+        "async"
+        "restify"
+      ]
+      C: [
+        "c"
+      ]
       CSS: [
+        "css"
+        "awesome"
         "color"
+        "ionic"
+        "media"
+        "semantic"
+        "bootstrap"
+        "pure"
       ]
       CoffeeScript: [
-        "bluebird"
-        "react"
-        "jq"
-        "atom"
-        "awsjs"
-      ]
-      HTML: [
-        "emmet"
-        "htmle"
-        "ionic"
-        "semantic"
-      ]
-      JavaScript: [
-        "node"
         "express"
-        "sails"
-        "hapi"
-        "chai"
-        "sinon"
-        "jasmine"
-        "jsdoc"
-        "moment"
-        "mori"
-        "baconjs"
-        "ampersandjs"
-        "relay"
-        "react"
-        "jq"
-        "handlebars"
-        "ionic"
-        "reactnative"
-        "threejs"
-        "d3"
-        "b2"
-        "phaser"
-        "electron"
-        "chrome"
+        "lodash"
+        "js"
+        "node"
+        "coffee"
         "atom"
         "http"
+        "regex"
         "httpheader"
+        "ascii"
         "mime"
-        "rfc"
+        "bluebird"
+        "async"
+      ]
+      Dart: [
+        "dart"
+      ]
+      Go: [
+        "http"
+        "regex"
+        "httpheader"
+        "ascii"
+        "mime"
+      ]
+      HTML: [
+        "html"
+        "svg"
+        "htmle"
+        "awesome"
+        "color"
+        "ascii"
+        "mime"
+        "ionic"
+        "semantic"
+        "bootstrap"
+        "pure"
+      ]
+      Haskell: [
+        "haskell"
+      ]
+      JADE: [
+        "jade"
+      ]
+      JavaScript: [
+        "express"
+        "lodash"
+        "jq"
+        "d3"
+        "js"
         "mongodb"
-        "mongoose"
-        "pouchdb"
+        "node"
         "redis"
-        "awsjs"
+        "mysql"
+        "phonegap"
+        "svg"
+        "chai"
+        "zepto"
+        "cordova"
+        "http"
+        "regex"
+        "mongoose"
+        "sinon"
+        "moment"
+        "jsdoc"
+        "mori"
+        "elasticsearch"
+        "chrome"
+        "b2"
+        "httpheader"
+        "threejs"
+        "hapi"
+        "handlebars"
+        "gulp"
+        "ascii"
+        "mime"
+        "sails"
+        "ufp"
+        "electron"
+        "phaser"
+        "replay"
+        "rfc"
+        "mocha"
+        "keybase"
+        "async"
+        "restify"
       ]
       LESS: [
+        "css"
+        "less"
+        "awesome"
         "color"
+        "media"
         "atom"
       ]
+      Lisp: [
+        "lisp"
+      ]
+      Lua: [
+        "lua"
+      ]
+      Markdown: [
+        "markdown"
+      ]
       "Objective-C": [
-        "objc"
+        "xcode"
         "ios"
         "osx"
+        "objc"
       ]
       Python: [
         "py"
+        "mongodb"
+        "redis"
+        "mysql"
+        "ansible"
+        "http"
+        "regex"
+        "httpheader"
+        "ascii"
+        "mime"
+      ]
+      R: [
+        "r"
+      ]
+      Ruby: [
+        "puppet"
+        "mongodb"
+        "redis"
+        "mysql"
+        "rails"
+        "ruby"
+        "jekyll"
+        "http"
+        "regex"
+        "httpheader"
+        "ascii"
+        "mime"
+      ]
+      Rust: [
+        "rust"
+        "ascii"
+        "mime"
       ]
       SCSS: [
+        "foundation"
+        "css"
         "scss"
-        "susy"
-        "semantic"
+        "bourbon"
+        "neat"
+        "awesome"
         "color"
-        "media"
         "ionic"
+        "susy"
+        "media"
+        "semantic"
+        "bootstrap"
+        "pure"
       ]
       "Shell Scripts": [
-        "nginx"
+        "manpages"
+        "bash"
+        "bashshortcuts"
+        "omyzsh"
+        "tmux"
         "ufp"
       ]
       Swift: [
+        "xcode"
         "swift"
         "ios"
         "osx"
       ]
       TypeScript: [
         "typescript"
+        "js"
+      ]
+      YAML: [
+        "yaml"
       ]
   editor:
     fontFamily: "Hack"
     invisibles: {}
     showIndentGuide: true
+    tabType: "soft"
     zoomFontWhenCtrlScrolling: true
   emmet:
     useEmmetComments: false
@@ -228,6 +406,9 @@
     showDiff: false
   "git-log":
     fontScale: 0.9
+  "git-projects":
+    ignoredPatterns: "node_modules;.git;bower_components;.statictmp"
+    maxDepth: 1
   "highlight-column":
     lineMode: true
   "highlight-line":
@@ -245,11 +426,19 @@
     showErrorTabFile: false
     showErrorTabProject: false
     statusBar: "Show all errors"
+  "linter-eslint":
+    useGlobalEslint: true
   "linter-jscs":
     displayAs: "jscs Warning"
     esnext: true
+    fixOnSave: true
     onlyConfig: true
-    preset: "node-style-guide"
+    preset: "<none>"
+  "linter-sass-lint":
+    globalSassLint: true
+    noConfigDisable: true
+  "linter-stylelint":
+    disableWhenNoConfig: true
   "markdown-preview":
     useGitHubStyle: true
   "markdown-writer":
@@ -316,3 +505,9 @@
     showOnStartup: false
   whitespace:
     ignoreWhitespaceOnCurrentLine: false
+".gfm.source":
+  editor:
+    softWrap: false
+".json.source":
+  editor:
+    softWrap: false

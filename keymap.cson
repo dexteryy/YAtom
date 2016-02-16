@@ -103,6 +103,13 @@
   ', d d': 'tern:definition'
   ', d r': 'tern:references'
 
+'atom-text-editor.vim-mode:not(.insert-mode)[data-grammar~=css]':
+  'enter b': 'css-comb:comb'
+'atom-text-editor.vim-mode:not(.insert-mode)[data-grammar~=scss]':
+  'enter b': 'css-comb:comb'
+'atom-text-editor.vim-mode:not(.insert-mode)[data-grammar~=less]':
+  'enter b': 'css-comb:comb'
+
 'atom-text-editor.vim-mode:not(.insert-mode)[data-grammar~=rust]':
   ', d d': 'racer:find-definition'
 
