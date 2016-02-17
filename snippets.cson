@@ -1,0 +1,175 @@
+# Your snippets
+#
+# Atom snippets allow you to enter a simple prefix in the editor and hit tab to
+# expand the prefix into a larger code block with templated values.
+#
+# You can create a new snippet in this file by typing "snip" and then hitting
+# tab.
+#
+# An example CoffeeScript snippet to expand log to console.log:
+#
+# '.source.coffee':
+#   'Console log':
+#     'prefix': 'log'
+#     'body': 'console.log $1'
+#
+
+".source.js, .source.jsx, .source.ts":
+
+  "enable Flow":
+    "prefix": "flow"
+    "body": """
+    /* @flow */
+
+    """
+
+  "es6 react stateless component":
+    "prefix": "rsc"
+    "body": """
+    /* @flow */
+
+    import styles from './index.css';
+    import React from 'react';
+    import cssModules from 'react-css-modules';
+
+    type ${1:ComponentName}Props = {
+
+    };
+
+    function ${1:ComponentName}(props: ${1:ComponentName}Props) {
+      return (
+        <div>
+        </div>
+      );
+    }
+
+    export default cssModules(${1:ComponentName}, styles);
+    """
+
+  "es6 react component":
+    "prefix": "rcf"
+    "body": """
+    /* @flow */
+    /* eslint no-useless-constructor: 0 */
+
+    import styles from './index.scss';
+    import React, { Component } from 'react';
+    import cssModules from 'react-css-modules';
+
+    type ${1:ComponentName}Props = {
+
+    };
+
+    type ${1:ComponentName}States = {
+
+    };
+
+    class ${1:ComponentName} extends Component {
+
+      static defaultProps = {
+
+      };
+
+      constructor(props: ${1:ComponentName}Props) {
+        super(props);
+        // Operations usually carried out in componentWillMount go here
+      }
+
+      state: ${1:ComponentName}States = {
+
+      };
+
+      render(): React.Element {
+        return (
+          <div>
+          </div>
+        );
+      }
+
+    }
+
+    export default cssModules(${1:ComponentName}, styles);
+    """
+
+  "es6+flow class skeleton":
+    "prefix": "cfs"
+    "body": """
+    /* @flow */
+
+    type ${1:ClassName}Options = {
+
+    };
+
+    type ${1:ClassName}DefaultOptions = {
+
+    };
+
+    class ${1:ClassName} {
+
+      opt: ${1:ClassName}DefaultOptions = {
+
+      };
+
+      constructor(userOpt: ${1:ClassName}Options) {
+        Object.assign(this.opt, userOpt);
+        if (!this.opt.root) {
+          return;
+        }
+      }
+
+    }
+
+    export default ${1:ClassName};
+    """
+
+  "process.exit":
+    "prefix": "pe"
+    "body": """
+    process.exit(${1:code});
+    """
+
+  "alert":
+    "prefix": "al"
+    "body": """
+    alert('${1:msg}');
+    """
+
+  "debugger":
+    "prefix": "de"
+    "body": """
+    debugger;
+    """
+
+  "JSON.stringify":
+    "prefix": "js"
+    "body": "JSON.stringify(${1:obj});"
+
+  "JSON.parse":
+    "prefix": "jp"
+    "body": "JSON.parse(${1:obj});"
+
+".source.js":
+
+  "Gulp Pipe":
+    "prefix": "gup"
+    "body":"""
+    .pipe(${1:plugin}($2));$3
+    """
+
+  "Gulp Task Source":
+    "prefix": "gus"
+    "body": """
+    gulp.task('${1:Task}', function () {
+      return gulp.src('${2:Source}')
+      .pipe(${3:plugin}($4))$5
+      $6
+    });
+    """
+
+  "Gulp Task Watch":
+    "prefix": "guw"
+    "body": """
+    gulp.task('watch', function () {
+      gulp.watch('$1', ['$2']);$3
+    });
+    """

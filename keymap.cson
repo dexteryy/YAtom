@@ -134,6 +134,7 @@
 'atom-text-editor:not(.mini).vim-mode:not(.insert-mode):not(.jumpy-jump-mode)':
   '; f': 'jumpy:toggle'
   '; w': 'jumpy:toggle'
+  '; b': 'jumpy:toggle'
 
 # ==============================================================================
 
