@@ -80,8 +80,7 @@
   # 'alt-g h': 'open-on-github:history'
   # 'alt-g r': 'open-on-github:branch-compare'
 
-  ', c d': 'split-diff:diffPanes'
-  ', c x': 'split-diff:disable'
+  ', c d': 'split-diff:toggle'
 
   ', s l': 'project-manager:list-projects'
   ', s e': 'project-manager:edit-projects'
@@ -228,5 +227,5 @@
 '.platform-darwin atom-text-editor:not(.mini)':
   'cmd-ctrl-/': 'block-comment:toggle'
 
-'atom-text-editor[data-grammar="text html basic"]:not([mini]), atom-text-editor[data-grammar~="jade"]:not([mini])':
+'atom-text-editor[data-grammar="text html basic"]:not([mini]), atom-text-editor[data-grammar~="jsx"]:not([mini])':
   'cmd-e': 'emmet:expand-abbreviation'

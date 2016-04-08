@@ -68,6 +68,7 @@
     show: [
       'json'
       'yaml'
+      'js'
       'es6'
       'babel'
       'jsx'
@@ -84,6 +85,17 @@
   }
 
   # json
+  {
+    type: "url"
+    icon: "diff"
+    url: "http://tlrobinson.net/projects/javascript-fun/jsondiff/"
+    tooltip: "JSON Diff"
+    show: [
+      'json'
+    ]
+    style:
+      color: "#ADD8E6"
+  }
   {
     type: "url"
     icon: "package"
@@ -184,11 +196,89 @@
   {
     type: "url"
     iconset: "devicon"
+    icon: "javascript-plain"
+    url: "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference"
+    tooltip: "MDN JavaScript Reference"
+    show: [
+      'js'
+      'es6'
+      'babel'
+      'jsx'
+      'flow'
+    ]
+    style:
+      color: "#0095dd"
+  }
+  {
+    type: "url"
+    iconset: "devicon"
+    icon: "javascript-plain"
+    url: "http://exploringjs.com/es6/"
+    tooltip: "Exploring ES6"
+    show: [
+      'es6'
+      'babel'
+      'jsx'
+      'flow'
+    ]
+    style:
+      color: "#DDCCA1"
+  }
+  {
+    type: "url"
+    iconset: "devicon"
+    icon: "javascript-plain"
+    url: "http://babeljs.io/repl/"
+    tooltip: "Babel REPL"
+    show: [
+      'es6'
+      'babel'
+      'jsx'
+      'flow'
+    ]
+    style:
+      color: "#EED95B"
+  }
+  {
+    type: "url"
+    iconset: "ion"
+    icon: "waterdrop"
+    url: "http://jsnice.org/"
+    tooltip: "JS NICE"
+    show: [
+      'js'
+      'es6'
+      'babel'
+      'jsx'
+      'flow'
+    ]
+    style:
+      color: "#5E57A6"
+  }
+  {
+    type: "url"
+    iconset: "icomoon"
+    icon: "table2"
+    url: "http://kangax.github.io/compat-table/es6/"
+    tooltip: "ECMAScript compatibility table"
+    show: [
+      'es6'
+      'babel'
+      'jsx'
+      'flow'
+    ]
+    style:
+      color: "#EED95B"
+  }
+  {
+    type: "url"
+    iconset: "devicon"
     icon: "html5-plain"
     url: "https://html.spec.whatwg.org/multipage/"
     tooltip: "HTML Living Stardand"
     show: [
       'html'
+      'js'
       'es6'
       'babel'
       'jsx'
@@ -215,56 +305,12 @@
   }
   {
     type: "url"
-    iconset: "icomoon"
-    icon: "table2"
-    url: "http://kangax.github.io/compat-table/es6/"
-    tooltip: "ECMAScript compatibility table"
-    show: [
-      'es6'
-      'babel'
-      'jsx'
-      'flow'
-    ]
-    style:
-      color: "#EED95B"
-  }
-  {
-    type: "url"
-    iconset: "devicon"
-    icon: "javascript-plain"
-    url: "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference"
-    tooltip: "MDN JavaScript Reference"
-    show: [
-      'es6'
-      'babel'
-      'jsx'
-      'flow'
-    ]
-    style:
-      color: "#0095dd"
-  }
-  {
-    type: "url"
-    iconset: "devicon"
-    icon: "javascript-plain"
-    url: "http://exploringjs.com/es6/"
-    tooltip: "Exploring ES6"
-    show: [
-      'es6'
-      'babel'
-      'jsx'
-      'flow'
-    ]
-    style:
-      color: "#DDCCA1"
-  }
-  {
-    type: "url"
     iconset: "ion"
     icon: "cube"
     url: "http://webpack.github.io/docs/"
     tooltip: "Webpack"
     show: [
+      'js'
       'es6'
       'babel'
       'jsx'
@@ -280,6 +326,7 @@
     url: "http://gulpjs.com/plugins/"
     tooltip: "Gulp Plugins"
     show: [
+      'js'
       'es6'
       'babel'
       'jsx'
@@ -309,6 +356,7 @@
     callback: "node-debugger:start-resume"
     tooltip: "Node Debugger: Start Resume (F10)"
     show: [
+      'js'
       'es6'
       'babel'
       'jsx'
@@ -324,6 +372,7 @@
     callback: "node-debugger:stop"
     tooltip: "Node Debugger: Stop (shift-F10)"
     show: [
+      'js'
       'es6'
       'babel'
       'jsx'
@@ -605,6 +654,23 @@
   }
 
   {
+    type: "url"
+    url: 'http://requestb.in/'
+    icon: "bug"
+    tooltip: "RequestBin"
+    show: [
+      'js'
+      'es6'
+      'babel'
+      'jsx'
+      'flow'
+      'coffee'
+    ]
+    style:
+      color: "#1B70E0"
+  }
+
+  {
     type: "spacer"
   }
   {
@@ -677,7 +743,7 @@
   {
     type: "button"
     icon: "diff"
-    callback: 'split-diff:diffPanes'
+    callback: 'split-diff:toggle'
     tooltip: "Diff Panes (, c d)"
   }
   {
