@@ -131,9 +131,7 @@
   'z f': 'editor:fold-selection'
 
 'atom-text-editor:not(.mini).vim-mode:not(.insert-mode):not(.jumpy-jump-mode)':
-  '; f': 'jumpy:toggle'
-  '; w': 'jumpy:toggle'
-  '; b': 'jumpy:toggle'
+  'q': 'jumpy:toggle'
 
 # ==============================================================================
 
@@ -180,6 +178,7 @@
 # ==============================================================================
 
 'body.platform-darwin':
+  'cmd-t': 'recent-files-fuzzy-finder:toggle-finder'
   'cmd-shift-h': 'git-plus:menu'
 
   'cmd-g': 'git-projects:toggle-add'
@@ -193,9 +192,6 @@
   'ctrl-n': 'advanced-open-file:move-cursor-down'
   'ctrl-j': 'advanced-open-file:move-cursor-up'
   'ctrl-k': 'advanced-open-file:move-cursor-down'
-
-'.platform-darwin atom-workspace':
-  'cmd-t': 'recent-files-fuzzy-finder:toggle-finder'
 
 '.platform-darwin atom-workspace':
   'ctrl-`': 'terminal-plus:toggle'
