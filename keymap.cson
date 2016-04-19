@@ -194,15 +194,15 @@
   'ctrl-k': 'advanced-open-file:move-cursor-down'
 
 '.platform-darwin atom-workspace':
-  'ctrl-`': 'terminal-plus:toggle'
+  'ctrl-`': 'platformio-ide-terminal:toggle'
 
-'.platform-darwin .terminal-plus .terminal':
-  'cmd-c': 'terminal-plus:copy'
-  'cmd-v': 'terminal-plus:paste'
-  'cmd-w': 'terminal-plus:close'
-  'cmd-n': 'terminal-plus:new'
-  'cmd-}': 'terminal-plus:next'
-  'cmd-{': 'terminal-plus:prev'
+'.platform-darwin .platformio-ide-terminal .terminal':
+  'cmd-c': 'platformio-ide-terminal:copy'
+  'cmd-v': 'platformio-ide-terminal:paste'
+  'cmd-w': 'platformio-ide-terminal:close'
+  'cmd-n': 'platformio-ide-terminal:new'
+  'cmd-}': 'platformio-ide-terminal:next'
+  'cmd-{': 'platformio-ide-terminal:prev'
 
 '.platform-darwin atom-text-editor':
   'f6': 'build:toggle-panel'

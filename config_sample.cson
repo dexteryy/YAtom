@@ -492,8 +492,17 @@
     core: {}
     style:
       animationSpeed: 2
+      defaultPanelHeight: "20em"
       fontFamily: "Anonymous Pro"
       theme: "homebrew"
+  "platformio-ide-terminal":
+    core: {}
+    style:
+      defaultPanelHeight: "20em"
+      fontFamily: "Anonymous Pro"
+      theme: "homebrew"
+    toggles:
+      autoClose: true
   "todo-show":
     sortBy: "File"
   "tool-bar":

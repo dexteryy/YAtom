@@ -170,7 +170,8 @@ Community Packages:
 
 -----------------------------------
 
-- https://atom.io/packages/terminal-plus (K: ctrl+ ` / C)
+- https://atom.io/packages/platformio-ide-terminal (K: ctrl+ ` / C)
+- ~~https://atom.io/packages/terminal-plus (K: ctrl+ ` / C)~~
 - https://atom.io/packages/browser-plus (C)
 - https://atom.io/packages/node-debugger (K: F9, F10, shift+F10, F11, F12, shift-F12 / C)
 - https://atom.io/packages/atom-yeoman (C)
