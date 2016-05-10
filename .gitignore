@@ -6,5 +6,7 @@ packages/
 compile-cache/
 storage/
 blob-store/
+git-time-machine/
+split-diff/
 config.cson
 projects.cson

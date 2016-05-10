@@ -8,24 +8,7 @@
  * http://www.lesscss.org
  */
 
-atom-text-editor::shadow .jumpy {
-    &.label {
-      color: #000;
-      background-color: #0f0;
-    }
-    &.jump {
-      background-color: #ff0;
-    }
-}
-
 .theme-atom-dark-ui {
-
-  .atom-text-editor .line.highlight-line,
-  :host .line.highlight-line,
-  atom-text-editor .line.highlight-line,
-  atom-text-editor::shadow .line.highlight-line {
-    background: rgba(52, 61, 60, .4) !important;
-  }
 
   @tab-height: 32px;
 
@@ -116,6 +99,80 @@ atom-text-editor::shadow .jumpy {
   // .overlay.from-top,
   atom-panel.modal {
     top: 20%;
+  }
+
+}
+
+.theme-monokai-blackboard {
+
+  .atom-text-editor .line.highlight-line,
+  :host .line.highlight-line,
+  atom-text-editor .line.highlight-line,
+  atom-text-editor::shadow .line.highlight-line {
+    background: rgba(52, 61, 60, .4) !important;
+  }
+
+  .indent-guide-improved {
+    &.indent-guide-stack {
+      &.indent-guide-active {
+        background-color: #0066ff;
+      }
+    }
+  }
+
+}
+
+.theme-native-ui {
+
+}
+
+.theme-pen-paper-coffee-syntax,
+.theme-fizzy,
+// .theme-fizzy-syntax-theme,
+.theme-atom-light-syntax,
+.theme-atom-material-syntax-light,
+.theme-one-light-syntax {
+
+  .atom-text-editor .line.highlight-line,
+  :host .line.highlight-line,
+  atom-text-editor .line.highlight-line,
+  atom-text-editor::shadow .line.highlight-line {
+    background: rgba(100, 100, 100, 0.1) !important;
+  }
+
+  atom-text-editor .current-result .region,
+  atom-text-editor::shadow .current-result .region {
+    border-color: #06f;
+    border-width: 2px;
+  }
+
+  atom-text-editor .find-result .region,
+  atom-text-editor::shadow .find-result .region {
+    border-color: #09f;
+    border-width: 2px;
+  }
+
+  :host .highlights .highlight-selected .region,
+  atom-text-editor .highlights .highlight-selected .region,
+  atom-text-editor::shadow .highlights .highlight-selected .region {
+    border-color: #93f;
+    border-width: 2px;
+  }
+
+  atom-text-editor::shadow atom-text-editor-minimap,
+  atom-text-editor atom-text-editor-minimap,
+  html atom-text-editor-minimap {
+    border-left: 1px solid #eee;
+  }
+
+  .indent-guide-improved {
+    background-color: #eee;
+    &.indent-guide-stack {
+      background-color: #eee;
+      &.indent-guide-active {
+        background-color: #0099ff;
+      }
+    }
   }
 
 }

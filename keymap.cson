@@ -25,7 +25,7 @@
 
 # ==============================================================================
 
-'atom-text-editor.vim-mode:not(.insert-mode)':
+'atom-text-editor.vim-mode-plus:not(.insert-mode)':
   ':': 'command-palette:toggle'
   # 'cmd-alt-,': 'open ~/.atom/config.cson'
   # 'cmd-alt-.': 'open ~/.atom/keymap.cson'
@@ -49,7 +49,7 @@
   'z M': 'editor:fold-all'
   'z R': 'editor:unfold-all'
 
-  '%': 'vim-mode:bracket-matching-motion'
+  # '%': 'vim-mode:bracket-matching-motion'
 
   ', n t': 'tree-view:toggle'
   ', t b': 'symbols-tree-view:toggle'
@@ -64,6 +64,7 @@
 
   ', g l': 'git-log:show'
   ', g h': 'git-plus:log-current-file'
+  ', g t': 'git-time-machine:toggle'
   ', g s': 'git-plus:status'
   ', g a': 'git-plus:add'
   # ', g a': 'git-plus:add-and-commit'
@@ -98,21 +99,21 @@
   'f12': 'node-debugger:step-in'
   'shift-f12': 'node-debugger:step-out'
 
-'atom-text-editor.vim-mode:not(.insert-mode)[data-grammar~=js]':
+'atom-text-editor.vim-mode-plus:not(.insert-mode)[data-grammar~=js]':
   ', d d': 'tern:definition'
   ', d r': 'tern:references'
 
-'atom-text-editor.vim-mode:not(.insert-mode)[data-grammar~=css]':
+'atom-text-editor.vim-mode-plus:not(.insert-mode)[data-grammar~=css]':
   'enter b': 'css-comb:comb'
-'atom-text-editor.vim-mode:not(.insert-mode)[data-grammar~=scss]':
+'atom-text-editor.vim-mode-plus:not(.insert-mode)[data-grammar~=scss]':
   'enter b': 'css-comb:comb'
-'atom-text-editor.vim-mode:not(.insert-mode)[data-grammar~=less]':
+'atom-text-editor.vim-mode-plus:not(.insert-mode)[data-grammar~=less]':
   'enter b': 'css-comb:comb'
 
-'atom-text-editor.vim-mode:not(.insert-mode)[data-grammar~=rust]':
+'atom-text-editor.vim-mode-plus:not(.insert-mode)[data-grammar~=rust]':
   ', d d': 'racer:find-definition'
 
-'atom-text-editor.vim-mode.visual-mode':
+'atom-text-editor.vim-mode-plus.visual-mode':
   'enter space': 'aligner:align'
   'enter 0 space': 'atom-alignment:align'
   'enter * space': 'atom-alignment:alignMultiple'
@@ -130,7 +131,7 @@
 
   'z f': 'editor:fold-selection'
 
-'atom-text-editor:not(.mini).vim-mode:not(.insert-mode):not(.jumpy-jump-mode)':
+'atom-text-editor:not(.mini).vim-mode-plus:not(.insert-mode):not(.jumpy-jump-mode)':
   'q': 'jumpy:toggle'
 
 # ==============================================================================
@@ -142,11 +143,11 @@
 'atom-text-editor':
   'ctrl-k': 'core:move-up'
 
-'atom-text-editor:not(.mini).vim-mode:not(.insert-mode)':
+'atom-text-editor:not(.mini).vim-mode-plus:not(.insert-mode)':
   'tab': 'editor:indent-selected-rows'
   'shift-tab': 'editor:outdent-selected-rows'
 
-'atom-text-editor.vim-mode:not(.command-mode).autocomplete-active':
+'atom-text-editor.vim-mode-plus:not(.command-mode).autocomplete-active':
   'escape': 'autocomplete-plus:cancel'
 
 # 'atom-text-editor:not(.mini).autocomplete-active':
@@ -193,16 +194,31 @@
   'ctrl-j': 'advanced-open-file:move-cursor-up'
   'ctrl-k': 'advanced-open-file:move-cursor-down'
 
-'.platform-darwin atom-workspace':
-  'ctrl-`': 'platformio-ide-terminal:toggle'
+'.platform-darwin atom-text-editor.vim-mode-plus:not(.insert-mode)':
+  'ctrl-p': 'clipboard-plus:toggle'
 
-'.platform-darwin .platformio-ide-terminal .terminal':
-  'cmd-c': 'platformio-ide-terminal:copy'
-  'cmd-v': 'platformio-ide-terminal:paste'
-  'cmd-w': 'platformio-ide-terminal:close'
-  'cmd-n': 'platformio-ide-terminal:new'
-  'cmd-}': 'platformio-ide-terminal:next'
-  'cmd-{': 'platformio-ide-terminal:prev'
+'atom-workspace':
+  'cmd-shift-.': 'keybinding-cheatsheet:toggle'
+
+'.platform-darwin atom-workspace':
+  # 'ctrl-`': 'platformio-ide-terminal:toggle'
+  'ctrl-`': 'term3:open'
+
+'.term3':
+  'cmd-c': 'term3:copy'
+  'ctrl-c': 'term3:copy'
+  'cmd-v': 'term3:paste'
+  'ctrl-v': 'term3:paste'
+  'ctrl-insert': 'term3:copy'
+  'shift-insert': 'term3:paste'
+
+# '.platform-darwin .platformio-ide-terminal .terminal':
+#   'cmd-c': 'platformio-ide-terminal:copy'
+#   'cmd-v': 'platformio-ide-terminal:paste'
+#   'cmd-w': 'platformio-ide-terminal:close'
+#   'cmd-n': 'platformio-ide-terminal:new'
+#   'cmd-}': 'platformio-ide-terminal:next'
+#   'cmd-{': 'platformio-ide-terminal:prev'
 
 '.platform-darwin atom-text-editor':
   'f6': 'build:toggle-panel'

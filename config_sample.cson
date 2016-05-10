@@ -16,6 +16,25 @@
   "atom-css-comb":
     projectConfigs: ".csscomb"
     readyMadeConfigs: "csscomb"
+  "atom-material-ui":
+    colors:
+      abaseColor:
+        alpha: 1
+        blue: 234
+        green: 222
+        red: 128
+      accentColor:
+        alpha: 1
+        blue: 148
+        green: 140
+        red: 82
+      predefinedColor: "Cyan"
+    tabs:
+      compactTabs: true
+      tintedTabBar: true
+    treeView:
+      blendTabs: true
+      compactList: true
   "atom-ternjs":
     lint: false
     useSnippets: true
@@ -40,12 +59,48 @@
     closeEmptyWindows: false
     destroyEmptyPanes: false
     disabledPackages: [
+      "Stylus"
+      "activate-power-mode"
+      "autoclose-html"
+      "ex-mode"
+      "expose"
+      "terminal-plus"
+      "nuclide-type-hint"
+      "nuclide-flow"
+      "nuclide-url-hyperclick"
+      "relative-line-numbers"
+      "python-tools"
+      "preview"
+      "linter-stylint"
+      "linter-scss-lint"
+      "linter-jscs"
+      "language-nginx"
+      "language-apache"
+      "jquery-snippets"
+      "js-hyperclick"
+      "git-difftool"
+      "git-control"
+      "hyperclick"
+      "ide-flow"
+      "javascript-snippets"
+      "asciidoc-preview"
+      "node-debugger"
+      "symbols-tree-view"
+      "atom-yeoman"
+      "json-schema"
+      "minimap-autohide"
+      "linter-tslint"
+      "autocomplete-python"
+      "linter-tidy"
+      "platformio-ide-terminal"
+      "vim-mode"
     ]
     ignoredNames: [
       ".git"
       ".svn"
       ".DS_Store"
     ]
+    openEmptyEditorOnStart: false
     packagesWithKeymapsDisabled: [
       "git-diff"
       "grammar-selector"
@@ -65,7 +120,6 @@
       "atom-alignment"
       "activate-power-mode"
       "atom-beautify"
-      "autocomplete-python"
       "bezier-curve-editor"
       "block-comment"
       "color-picker"
@@ -109,6 +163,12 @@
       "browser-plus"
       "git-projects"
       "build"
+      "autocomplete-python"
+      "turbo-javascript"
+      "git-time-machine"
+      "open-recent"
+      "term3"
+      "keybinding-cheatsheet"
     ]
     themes: [
       "atom-dark-ui"
@@ -418,6 +478,7 @@
   "indentation-indicator":
     indicatorPosition: "right"
   jumpy:
+    highContrast: true
     useHomingBeaconEffectOnJumps: false
   "language-babel":
     transpileOnSave: false
@@ -460,6 +521,8 @@
     highlightCursorsLines: true
   "node-debugger":
     nodePath: "/usr/local/bin/node"
+  "open-recent":
+    listDirectoriesAddedToProject: true
   pigments:
     autocompleteScopes: [
       ".yss"
@@ -467,6 +530,22 @@
     groupPaletteColors: "by file"
     markerType: "dot"
     sortPaletteColors: "by color"
+  "platformio-ide-terminal":
+    ansiColors:
+      normal:
+        black:
+          alpha: 1
+          blue: 17
+          green: 17
+          red: 17
+      zBright: {}
+    core: {}
+    style:
+      defaultPanelHeight: "20em"
+      fontFamily: "Anonymous Pro"
+      theme: "homebrew"
+    toggles:
+      autoClose: true
   "preview-plus":
     cjsx: "JavaScript"
     css: "SCSS"
@@ -485,9 +564,16 @@
       "text.plain.null-grammar"
     ]
   "split-diff":
+    diffWords: true
     ignoreWhitespace: true
+    leftEditorColor: "red"
+    rightEditorColor: "green"
+    syncHorizontalScroll: true
   tabs:
     usePreviewTabs: true
+  term3:
+    fontFamily: "Anonymous Pro"
+    openPanesInSameSplit: true
   "terminal-plus":
     core: {}
     style:
@@ -495,14 +581,6 @@
       defaultPanelHeight: "20em"
       fontFamily: "Anonymous Pro"
       theme: "homebrew"
-  "platformio-ide-terminal":
-    core: {}
-    style:
-      defaultPanelHeight: "20em"
-      fontFamily: "Anonymous Pro"
-      theme: "homebrew"
-    toggles:
-      autoClose: true
   "todo-show":
     sortBy: "File"
   "tool-bar":
@@ -510,10 +588,20 @@
     position: "Left"
   "trailing-spaces":
     enableForCursorLines: true
+  "vim-mode":
+    useClipboardAsDefaultRegister: true
+  "vim-mode-clipboard-plus":
+    useVimModePlus: true
+  "vim-mode-plus":
+    hideTabBarOnMaximizePane: false
+    useClipboardAsDefaultRegister: true
   welcome:
     showOnStartup: false
   whitespace:
     ignoreWhitespaceOnCurrentLine: false
+  "file-types":
+    "^\\.env": "source.ini"
+    ect: "text.html.basic"
 ".gfm.source":
   editor:
     softWrap: false

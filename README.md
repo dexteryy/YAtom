@@ -73,6 +73,7 @@ Community Packages:
 -----------------------------------
 
 - https://atom.io/packages/advanced-open-file (K: cmd-O / C)
+- https://atom.io/packages/open-recent (A / C)
 - https://atom.io/packages/git-projects (K: cmd-G, cmd-shift-G / C)
 - https://atom.io/packages/expose (K: cmd-shift-B / C)
 - https://atom.io/packages/recent-files-fuzzy-finder (K: cmd-T)
@@ -84,6 +85,7 @@ Community Packages:
 - https://atom.io/packages/flex-tool-bar (A)
 - https://atom.io/packages/symbols-tree-view (C / K: [,t]b)
 - https://atom.io/packages/todo-show (C / K: [,t]l)
+- https://atom.io/packages/keybinding-cheatsheet (C / K)
 
 -----------------------------------
 
@@ -98,8 +100,9 @@ Community Packages:
 
 -----------------------------------
 
-- https://atom.io/packages/vim-mode (A / K: [ctrl-w]v/s, [ctrl-w]h/l/j/k, [ctrl-w]w/p, [m/`], y/p, [“]ay/p, u, ., +/-)
-    - https://github.com/atom/vim-mode/blob/master/keymaps/vim-mode.cson
+- https://atom.io/packages/vim-mode-plus (A / K: [ctrl-w]v/s, [ctrl-w]h/l/j/k, [ctrl-w]w/p, [m/`], y/p, [“]ay/p, u, ., +/-)
+    - https://github.com/t9md/atom-vim-mode-plus/blob/master/keymaps/vim-mode-plus.cson
+- ~~https://atom.io/packages/vim-mode~~
 - https://atom.io/packages/jumpy (K: [;]f)
 
 -----------------------------------
@@ -123,6 +126,7 @@ Community Packages:
 - https://atom.io/packages/resize-indent (C)
 - https://atom.io/packages/sublime-style-column-selection (K+M: alt-cursor)
 - https://atom.io/packages/atom-beautify (RM / C / K: [enter]b)
+- https://atom.io/packages/html-entities (C)
 - https://atom.io/packages/autoclose-html (A)
 - https://atom.io/packages/atom-css-comb (K: [enter]b)
 - https://atom.io/packages/aligner (K: [enter]space / C)
@@ -135,6 +139,8 @@ Community Packages:
 - https://atom.io/packages/merge-conflicts (A / C)
 - https://atom.io/packages/emmet (K: cmd+E)
 - https://atom.io/packages/figlet (C)
+- https://atom.io/packages/clipboard-plus (A / K: ctrl-p / C)
+- https://atom.io/packages/vim-mode-clipboard-plus (A)
 
 -----------------------------------
 
@@ -146,6 +152,7 @@ Community Packages:
 - ~~https://atom.io/packages/indent-guide-improved (A)~~
 - https://atom.io/packages/relative-line-numbers (A)
 - https://atom.io/packages/git-diff (A)
+- https://atom.io/packages/custom-title (A)
 
 -----------------------------------
 
@@ -158,6 +165,7 @@ Community Packages:
 - https://atom.io/packages/pigments (C / A)
 - https://atom.io/packages/command-logger (C)
 - https://atom.io/packages/file-icons (A)
+https://atom.io/packages/file-types (A)
 
 -----------------------------------
 
@@ -170,11 +178,13 @@ Community Packages:
 
 -----------------------------------
 
-- https://atom.io/packages/platformio-ide-terminal (K: ctrl+ ` / C)
+- https://atom.io/packages/term3 (K: ctrl+` / C)
+- ~~https://atom.io/packages/platformio-ide-terminal (K: ctrl+ ` / C)~~
 - ~~https://atom.io/packages/terminal-plus (K: ctrl+ ` / C)~~
 - https://atom.io/packages/browser-plus (C)
 - https://atom.io/packages/node-debugger (K: F9, F10, shift+F10, F11, F12, shift-F12 / C)
-- https://atom.io/packages/atom-yeoman (C)
+- https://atom.io/packages/npm-install (C)
+- ~~https://atom.io/packages/atom-yeoman (C)~~
 - https://atom.io/packages/markdown-writer (C)
 - https://atom.io/packages/gist-it (C)
 - https://atom.io/packages/ask-stack (C)
@@ -249,5 +259,6 @@ Community Packages:
 - https://atom.io/packages/language-apache
 - https://atom.io/packages/language-docker
 - https://atom.io/packages/language-gitignore
+- https://atom.io/packages/atom-handlebars
 - https://atom.io/packages/language-restructuredtext
 - https://atom.io/packages/language-asciidoc

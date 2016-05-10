@@ -38,15 +38,15 @@
     callback: "application:add-project-folder"
     tooltip: "Add Project Folder (cmd-shift-o)"
   }
-  {
-    type: "button"
-    # iconset: "fa"
-    # icon: "plus-circle"
-    iconset: "icomoon"
-    icon: "box-add"
-    callback: "yo:yeoman"
-    tooltip: "Yo: Yeoman"
-  }
+  # {
+  #   type: "button"
+  #   # iconset: "fa"
+  #   # icon: "plus-circle"
+  #   iconset: "icomoon"
+  #   icon: "box-add"
+  #   callback: "yo:yeoman"
+  #   tooltip: "Yo: Yeoman"
+  # }
   {
     type: "button"
     iconset: "icomoon"
