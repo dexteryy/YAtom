@@ -31,7 +31,7 @@ Done. Take a minute to get familiar with key mapping, toolbar and plugins.
 
 ## Plugins
 
-See [package.cson](https://github.com/dexteryy/YAtom/blob/master/package.cson)
+See [packages.cson](https://github.com/dexteryy/YAtom/blob/master/packages.cson)
 
 ## Key Mappings
 
