@@ -6,6 +6,7 @@ packages/
 compile-cache/
 storage/
 blob-store/
+recovery/
 git-time-machine/
 split-diff/
 config.cson

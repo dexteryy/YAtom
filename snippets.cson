@@ -23,72 +23,201 @@
 
     """
 
-  "es6 react stateless component":
-    "prefix": "rsc"
-    "body": """
-    /* @flow */
+  "React: forceUpdate(...)":
+    prefix: "fup"
+    body: "forceUpdate(${1:callback});"
 
-    import styles from './index.css';
-    import React from 'react';
-    import cssModules from 'react-css-modules';
+  "React: this.props.":
+    prefix: "props"
+    body: "this.props.${1}"
 
-    type ${1:ComponentName}Props = {
+  "React: this.state.":
+    prefix: "state"
+    body: "this.state.${1}"
 
-    };
+  "React: render(component, container, [callback])":
+    prefix: "rrc"
+    body: "ReactDOM.render(${1:<$2 />}, ${3:document.body}${4:, ${5:callback}});"
 
-    function ${1:ComponentName}(props: ${1:ComponentName}Props) {
-      return (
-        <div>
-        </div>
-      );
-    }
+  # React >0.13 (ES6)
+  "React: componentDidMount() { ... } (ES6)":
+    prefix: "cdm"
+    body: "componentDidMount() {\n\t${1}\n}"
 
-    export default cssModules(${1:ComponentName}, styles);
-    """
+  "React: componentDidUpdate(pp, ps) { ... } (ES6)":
+    prefix: "cdup"
+    body: "componentDidUpdate(prevProps, prevState) {\n\t${1}\n}"
 
-  "es6 react component":
-    "prefix": "rcf"
-    "body": """
-    /* @flow */
-    /* eslint no-useless-constructor: 0 */
+  "React: componentWillMount() { ... } (ES6)":
+    prefix: "cwm"
+    body: "componentWillMount() {\n\t${1}\n}"
 
-    import styles from './index.scss';
+  "React: componentWillReceiveProps(np) { ... } (ES6)":
+    prefix: "cwr"
+    body: "componentWillReceiveProps(nextProps) {\n\t${1}\n}"
+
+  "React: componentWillUnmount() { ... } (ES6)":
+    prefix: "cwun"
+    body: "componentWillUnmount() {\n\t${1}\n}"
+
+  "React: componentWillUpdate(np, ns) { ... } (ES6)":
+    prefix: "cwu"
+    body: "componentWillUpdate(nextProps, nextState) {\n\t${1}\n}"
+
+  "React: static defaultProps = { ... }":
+    prefix: "dp"
+    body: "static defaultProps = {\n\t${1}\n};"
+
+  "React: state = { ... }":
+    prefix: "is"
+    body: "state = {\n\t${1}: ${2}\n};"
+
+  "React: static propTypes = { ... } (ES6)":
+    prefix: "pt"
+    body: "static propTypes = {\n\t${1}: React.PropTypes.${2:string}\n};"
+
+  "React: render() { return ... } (ES6)":
+    prefix: "ren"
+    body: "render() {\n\treturn (\n\t\t${1:<div />}\n\t);\n}"
+
+  "React: setState({ ... }) (ES6)":
+    prefix: "sst"
+    body: "this.setState({\n\t${1}: ${2}\n});"
+
+  "React: shouldComponentUpdate(np, ns) { ... } (ES6)":
+    prefix: "scu"
+    body: "shouldComponentUpdate(nextProps, nextState) {\n\t${1}\n}"
+
+  "React: const { ${1} } = this.props (ES6)":
+    prefix: "props6"
+    body: "const { ${1} } = this.props;"
+
+  "React: const { ${1} } = this.states (ES6)":
+    prefix: "state6"
+    body: "const { ${1} } = this.states;"
+
+  "PropTypes.func.isRequired":
+    prefix: "ptf"
+    body: "PropTypes.func.isRequired"
+
+  "PropTypes.string.isRequired":
+    prefix: "pts"
+    body: "PropTypes.string.isRequired"
+
+  "PropTypes.object.isRequired":
+    prefix: "pto"
+    body: "PropTypes.object.isRequired"
+
+  "PropTypes.array.isRequired":
+    prefix: "pta"
+    body: "PropTypes.array.isRequired"
+
+  "PropTypes.bool.isRequired":
+    prefix: "ptb"
+    body: "PropTypes.bool.isRequired"
+
+  "PropTypes.number.isRequired":
+    prefix: "ptn"
+    body: "PropTypes.number.isRequired"
+
+  "PropTypes.node.isRequired":
+    prefix: "ptnode"
+    body: "PropTypes.node.isRequired"
+
+  "PropTypes.element.isRequired":
+    prefix: "pte"
+    body: "PropTypes.element.isRequired"
+
+  "PropTypes.any.isRequired":
+    prefix: "ptany"
+    body: "PropTypes.any.isRequired"
+
+  "PropTypes.shape({...}).isRequired":
+    prefix: "ptshape"
+    body: "PropTypes.shape({ $1: $2 }).isRequired"
+
+  "React: container component":
+    prefix: "rcc"
+    body: """
+    //import styles from './index.scss';
+    //import * as styles from './style.js';
     import React, { Component } from 'react';
-    import cssModules from 'react-css-modules';
+    //import cssModules from 'react-css-modules';
+    //import Radium from 'radium';
+    import { autobind } from 'core-decorators';
+    import {
+      pureRender,
+      connect,
+      stateSelector,
+      actionDispatcher,
+    } from 'webcube/boilerplate';
+    //import actionCreators from '../actions';
 
-    type ${1:ComponentName}Props = {
+    @connect()
+    @stateSelector(
+      state => state.model,
+      (model) => ({
+        model,
+      }),
+    )
+    @actionDispatcher({
+      //notify: actionCreators.notify,
+      push,
+      replace,
+    }, 'actions')
+    //@Radium
+    //@cssModules(styles)
+    @pureRender()
+    class $1 extends Component {
 
-    };
+      static propTypes = {
 
-    type ${1:ComponentName}States = {
-
-    };
-
-    class ${1:ComponentName} extends Component {
+      };
 
       static defaultProps = {
 
       };
 
-      constructor(props: ${1:ComponentName}Props) {
-        super(props);
-        // Operations usually carried out in componentWillMount go here
-      }
-
-      state: ${1:ComponentName}States = {
+      state = {
 
       };
 
-      render(): React.Element {
+      render () {
+        const = {
+
+        } = this.props;
+        const = {
+
+        } = this.states;
         return (
-          <div>
-          </div>
+          <div></div>
         );
       }
 
     }
 
-    export default cssModules(${1:ComponentName}, styles);
+    export default ${1};
+    """
+
+  "React: stateless component (ES6)":
+    prefix: "rcs"
+    body: """
+    //import styles from './index.scss';
+    //import * as styles from './style.js';
+    import React from 'react';
+    //import cssModules from 'react-css-modules';
+    //import Radium from 'radium';
+
+    function $1({
+      ${2:props},
+    }) {
+      return (
+        ${3:<div />}
+      );
+    }
+
+    //export default Radium($1);
+    //export default cssModules($1, styles);
     """
 
   "es6+flow class skeleton":

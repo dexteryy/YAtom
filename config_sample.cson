@@ -9,10 +9,12 @@
   "advanced-open-file":
     createDirectories: true
   "atom-beautify":
-    analytics: false
-    beautifyEntireFileOnSave: false
-    js_end_with_comma: true
-    js_space_after_anon_function: true
+    general:
+      analytics: false
+      beautifyEntireFileOnSave: false
+    js:
+      end_with_comma: true
+      space_after_anon_function: true
   "atom-css-comb":
     projectConfigs: ".csscomb"
     readyMadeConfigs: "csscomb"
@@ -65,23 +67,14 @@
       "ex-mode"
       "expose"
       "terminal-plus"
-      "nuclide-type-hint"
-      "nuclide-flow"
-      "nuclide-url-hyperclick"
       "relative-line-numbers"
       "python-tools"
       "preview"
-      "linter-stylint"
-      "linter-scss-lint"
-      "linter-jscs"
       "language-nginx"
       "language-apache"
       "jquery-snippets"
-      "js-hyperclick"
       "git-difftool"
       "git-control"
-      "hyperclick"
-      "ide-flow"
       "javascript-snippets"
       "asciidoc-preview"
       "node-debugger"
@@ -91,9 +84,16 @@
       "minimap-autohide"
       "linter-tslint"
       "autocomplete-python"
-      "linter-tidy"
-      "platformio-ide-terminal"
       "vim-mode"
+      "atom-typescript"
+      "highlight-column"
+      "react"
+      "browser-plus"
+      "build-grunt"
+      "linter-golinter"
+      "vim-surround"
+      "markdown-preview"
+      "term3"
     ]
     ignoredNames: [
       ".git"
@@ -167,13 +167,17 @@
       "turbo-javascript"
       "git-time-machine"
       "open-recent"
-      "term3"
       "keybinding-cheatsheet"
+      "platformio-ide-terminal"
+      "markdown-preview-plus"
+      "hyperclick"
     ]
     themes: [
       "atom-dark-ui"
       "monokai-blackboard"
     ]
+  "custom-title":
+    template: "<% if (fileInProject) { %><%= projectName %>/<%= relativeFilePath %><% } else { %><%= filePath %><% } %><% if (projectPath) { %> - <%= projectPath %><% } %>"
   dash:
     filenames:
       Dockerfile: [
@@ -203,48 +207,51 @@
         "express"
         "lodash"
         "jq"
+        "html"
         "d3"
         "js"
         "mongodb"
         "node"
         "redis"
         "mysql"
-        "phonegap"
         "svg"
         "chai"
         "zepto"
         "cordova"
+        "htmle"
         "http"
-        "regex"
         "mongoose"
         "sinon"
         "moment"
+        "awesome"
+        "awsjs"
+        "emoji"
+        "color"
         "jsdoc"
         "mori"
         "elasticsearch"
         "chrome"
         "b2"
+        "pouchdb"
         "reactnative"
         "httpheader"
         "threejs"
         "atom"
-        "hapi"
-        "handlebars"
         "react"
         "gulp"
         "ascii"
         "mime"
-        "sails"
         "ufp"
         "electron"
         "phaser"
-        "replay"
+        "relay"
         "rfc"
         "mocha"
         "keybase"
-        "flow"
-        "async"
-        "restify"
+        "immutable"
+        "draftjs"
+        "htmlhe"
+        "redux"
       ]
       C: [
         "c"
@@ -253,7 +260,6 @@
         "css"
         "awesome"
         "color"
-        "ionic"
         "media"
         "semantic"
         "bootstrap"
@@ -292,7 +298,6 @@
         "color"
         "ascii"
         "mime"
-        "ionic"
         "semantic"
         "bootstrap"
         "pure"
@@ -307,44 +312,51 @@
         "express"
         "lodash"
         "jq"
+        "html"
         "d3"
         "js"
         "mongodb"
         "node"
         "redis"
         "mysql"
-        "phonegap"
         "svg"
         "chai"
         "zepto"
         "cordova"
+        "htmle"
         "http"
-        "regex"
         "mongoose"
         "sinon"
         "moment"
+        "awesome"
+        "awsjs"
+        "emoji"
+        "color"
         "jsdoc"
         "mori"
         "elasticsearch"
         "chrome"
         "b2"
+        "pouchdb"
+        "reactnative"
         "httpheader"
         "threejs"
-        "hapi"
-        "handlebars"
+        "atom"
+        "react"
         "gulp"
         "ascii"
         "mime"
-        "sails"
         "ufp"
         "electron"
         "phaser"
-        "replay"
+        "relay"
         "rfc"
         "mocha"
         "keybase"
-        "async"
-        "restify"
+        "immutable"
+        "draftjs"
+        "htmlhe"
+        "redux"
       ]
       LESS: [
         "css"
@@ -368,6 +380,7 @@
         "ios"
         "osx"
         "objc"
+        "apple"
       ]
       Python: [
         "py"
@@ -411,7 +424,6 @@
         "neat"
         "awesome"
         "color"
-        "ionic"
         "susy"
         "media"
         "semantic"
@@ -431,22 +443,74 @@
         "swift"
         "ios"
         "osx"
+        "apple"
       ]
       TypeScript: [
         "typescript"
+        "express"
+        "lodash"
+        "jq"
+        "html"
+        "d3"
         "js"
+        "mongodb"
+        "node"
+        "redis"
+        "mysql"
+        "svg"
+        "chai"
+        "zepto"
+        "cordova"
+        "htmle"
+        "http"
+        "mongoose"
+        "sinon"
+        "moment"
+        "awesome"
+        "awsjs"
+        "emoji"
+        "color"
+        "jsdoc"
+        "mori"
+        "elasticsearch"
+        "chrome"
+        "b2"
+        "pouchdb"
+        "reactnative"
+        "httpheader"
+        "threejs"
+        "atom"
+        "react"
+        "gulp"
+        "ascii"
+        "mime"
+        "ufp"
+        "electron"
+        "phaser"
+        "relay"
+        "rfc"
+        "mocha"
+        "keybase"
+        "immutable"
+        "draftjs"
+        "htmlhe"
+        "redux"
       ]
       YAML: [
         "yaml"
       ]
   editor:
     fontFamily: "Hack"
+    fontSize: 13
     invisibles: {}
-    showIndentGuide: true
     tabType: "soft"
     zoomFontWhenCtrlScrolling: true
   emmet:
     useEmmetComments: false
+  "file-types":
+    "^\\.env": "source.ini"
+    config: "source.ini"
+    ect: "text.html.basic"
   "file-watcher":
     promptWhenFileHasChangedOnDisk: false
   "find-and-replace":
@@ -488,13 +552,11 @@
     showErrorTabProject: false
     statusBar: "Show all errors"
   "linter-eslint":
+    fixOnSave: true
     useGlobalEslint: true
   "linter-jscs":
-    displayAs: "jscs Warning"
     esnext: true
-    fixOnSave: true
     onlyConfig: true
-    preset: "<none>"
   "linter-sass-lint":
     globalSassLint: true
     noConfigDisable: true
@@ -502,27 +564,42 @@
     disableWhenNoConfig: true
   "markdown-preview":
     useGitHubStyle: true
+  "markdown-preview-plus":
+    useGitHubStyle: true
   "markdown-writer":
     siteEngine: "hexo"
   minimap:
     adjustMinimapWidthToSoftWrap: false
     plugins:
       bookmarks: true
+      bookmarksDecorationsZIndex: 0
       codeglance: true
+      codeglanceDecorationsZIndex: 0
       "find-and-replace": true
+      "find-and-replaceDecorationsZIndex": 0
       "git-diff": true
+      "git-diffDecorationsZIndex": 0
       "highlight-selected": true
+      "highlight-selectedDecorationsZIndex": 0
       "minimap-autohide": false
+      "minimap-autohideDecorationsZIndex": 0
       "minimap-hide": true
+      "minimap-hideDecorationsZIndex": 0
       pigments: false
+      pigmentsDecorationsZIndex: 0
       selection: true
+      selectionDecorationsZIndex: 0
       "split-diff": true
+      "split-diffDecorationsZIndex": 0
   "minimap-selection":
     highlightCursorsLines: true
   "node-debugger":
     nodePath: "/usr/local/bin/node"
   "open-recent":
     listDirectoriesAddedToProject: true
+  "package-sync":
+    createOnChange: true
+    forceOverwrite: true
   pigments:
     autocompleteScopes: [
       ".yss"
@@ -534,10 +611,10 @@
     ansiColors:
       normal:
         black:
-          alpha: 1
-          blue: 17
-          green: 17
           red: 17
+          green: 17
+          blue: 17
+          alpha: 1
       zBright: {}
     core: {}
     style:
@@ -564,7 +641,6 @@
       "text.plain.null-grammar"
     ]
   "split-diff":
-    diffWords: true
     ignoreWhitespace: true
     leftEditorColor: "red"
     rightEditorColor: "green"
@@ -588,20 +664,16 @@
     position: "Left"
   "trailing-spaces":
     enableForCursorLines: true
+  "tree-view": {}
   "vim-mode":
     useClipboardAsDefaultRegister: true
-  "vim-mode-clipboard-plus":
-    useVimModePlus: true
+  "vim-mode-clipboard-plus": {}
   "vim-mode-plus":
     hideTabBarOnMaximizePane: false
-    useClipboardAsDefaultRegister: true
   welcome:
     showOnStartup: false
   whitespace:
     ignoreWhitespaceOnCurrentLine: false
-  "file-types":
-    "^\\.env": "source.ini"
-    ect: "text.html.basic"
 ".gfm.source":
   editor:
     softWrap: false

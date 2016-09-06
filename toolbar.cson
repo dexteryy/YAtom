@@ -618,7 +618,8 @@
     type: "button"
     iconset: "fa"
     icon: "eye"
-    callback: "markdown-preview:toggle"
+    # callback: "markdown-preview:toggle"
+    callback: "markdown-preview-plus:toggle"
     tooltip: "Markdown Preview"
     show: [
       'Markdown'

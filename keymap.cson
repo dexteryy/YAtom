@@ -57,6 +57,7 @@
 
   ', d f': 'dash:shortcut'
   ', d g': 'dash:shortcut-alt'
+  ', d h': 'hyperclick:confirm-cursor'
   ', d l': 'link:open'
   ', d c': 'color-picker:open'
   ', d b': 'bezier-curve-editor:open'
@@ -193,6 +194,7 @@
   'ctrl-n': 'advanced-open-file:move-cursor-down'
   'ctrl-j': 'advanced-open-file:move-cursor-up'
   'ctrl-k': 'advanced-open-file:move-cursor-down'
+  'shift-delete': 'advanced-open-file:delete-path-component'
 
 '.platform-darwin atom-text-editor.vim-mode-plus:not(.insert-mode)':
   'ctrl-p': 'clipboard-plus:toggle'
@@ -201,24 +203,24 @@
   'cmd-shift-.': 'keybinding-cheatsheet:toggle'
 
 '.platform-darwin atom-workspace':
-  # 'ctrl-`': 'platformio-ide-terminal:toggle'
-  'ctrl-`': 'term3:open'
+  'ctrl-`': 'platformio-ide-terminal:toggle'
+#   'ctrl-`': 'term3:open'
+#
+# '.term3':
+#   'cmd-c': 'term3:copy'
+#   'ctrl-c': 'term3:copy'
+#   'cmd-v': 'term3:paste'
+#   'ctrl-v': 'term3:paste'
+#   'ctrl-insert': 'term3:copy'
+#   'shift-insert': 'term3:paste'
 
-'.term3':
-  'cmd-c': 'term3:copy'
-  'ctrl-c': 'term3:copy'
-  'cmd-v': 'term3:paste'
-  'ctrl-v': 'term3:paste'
-  'ctrl-insert': 'term3:copy'
-  'shift-insert': 'term3:paste'
-
-# '.platform-darwin .platformio-ide-terminal .terminal':
-#   'cmd-c': 'platformio-ide-terminal:copy'
-#   'cmd-v': 'platformio-ide-terminal:paste'
-#   'cmd-w': 'platformio-ide-terminal:close'
-#   'cmd-n': 'platformio-ide-terminal:new'
-#   'cmd-}': 'platformio-ide-terminal:next'
-#   'cmd-{': 'platformio-ide-terminal:prev'
+'.platform-darwin .platformio-ide-terminal .terminal':
+  'cmd-c': 'platformio-ide-terminal:copy'
+  'cmd-v': 'platformio-ide-terminal:paste'
+  'cmd-w': 'platformio-ide-terminal:close'
+  'cmd-n': 'platformio-ide-terminal:new'
+  'cmd-}': 'platformio-ide-terminal:next'
+  'cmd-{': 'platformio-ide-terminal:prev'
 
 '.platform-darwin atom-text-editor':
   'f6': 'build:toggle-panel'
