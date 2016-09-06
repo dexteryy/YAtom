@@ -1,8 +1,8 @@
 
 ## YAtom
 
-* Integrated more than 200 plugins
-* YAtom's key mappings are as consistent as possible with [YVim](https://github.com/dexteryy/YVim)'s.
+* Integrated more than 200 plugins and well tuned settings without conflicts.
+* Vim-style key mappings, which are as consistent as possible with [YVim](https://github.com/dexteryy/YVim)'s.
 * Screenshot:
 
 ![Atom screenhhost](https://raw.github.com/dexteryy/YAtom/master/screenshot.png)
@@ -40,3 +40,8 @@ See [keymap.cson](https://github.com/dexteryy/YAtom/blob/master/keymap.cson)
 ## Toolbar
 
 See [toolbar.cson](https://github.com/dexteryy/YAtom/blob/master/toolbar.cson)
+
+## Theme
+
+* Syntax theme: [monokai-blackboard](https://github.com/dexteryy/monokai-blackboard)
+* UI theme: [customized](https://github.com/dexteryy/YAtom/blob/master/styles.less) Atom Dark
