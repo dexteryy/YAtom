@@ -21,11 +21,18 @@ cp ~/.atom/config_sample.cson ~/.atom/config.cson
 Use [package-sync](https://atom.io/packages/package-sync) to accomplish a "one-click install":
 
 * Open Atom
-* Press `cmd-shift-P` or `:`
-* Type `package sync: sync`
+* Install a plugin named 'package-sync' (`apm install package-sync`)
+* Restart Atom
+* Press `cmd-shift-P`
+* Type `package sync: sync` to start installing plugins
+* Wait for the installation process to complete (see the bottom bar for the process information)
 * Restart Atom
 
-#### Step 3
+#### Step 3 (optional)
+
+Install [Hack](http://sourcefoundry.org/hack/) font
+
+#### Step 4
 
 Done. Take a minute to get familiar with key mapping, toolbar and plugins.
 
