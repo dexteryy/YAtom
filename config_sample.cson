@@ -47,6 +47,8 @@
     defaultProvider: "Fuzzy"
     maxVisibleSuggestions: 30
     strictMatching: true
+  "autocomplete-ruby":
+    rsensePath: "/usr/local/bin/rsense"
   "block-cursor":
     cursorType: "underline"
   "browser-plus":
@@ -94,6 +96,8 @@
       "vim-surround"
       "markdown-preview"
       "term3"
+      "compare-files"
+      "autocomplete-ruby"
     ]
     ignoredNames: [
       ".git"
@@ -172,6 +176,7 @@
       "markdown-preview-plus"
       "hyperclick"
     ]
+    telemetryConsent: "limited"
     themes: [
       "atom-dark-ui"
       "monokai-blackboard"
@@ -508,7 +513,12 @@
   emmet:
     useEmmetComments: false
   "file-types":
+    ".htmlhintrc": "source.json"
+    ".stylelint": "source.yaml"
+    "^Dockerfile-.*$": "source.dockerfile"
+    "^Dockerfile\\..*$": "source.dockerfile"
     "^\\.env": "source.ini"
+    conf: "source.ini"
     config: "source.ini"
     ect: "text.html.basic"
   "file-watcher":
@@ -533,6 +543,8 @@
   "git-projects":
     ignoredPatterns: "node_modules;.git;bower_components;.statictmp"
     maxDepth: 1
+  "go-plus":
+    panelDisplayMode: "closed"
   "highlight-column":
     lineMode: true
   "highlight-line":
@@ -541,24 +553,29 @@
     onlyHighlightWholeWords: false
   "indentation-indicator":
     indicatorPosition: "right"
+  "js-hyperclick":
+    extensions: [
+      ".js"
+      ".jsx"
+      ".ts"
+      ".json"
+    ]
   jumpy:
     highContrast: true
     useHomingBeaconEffectOnJumps: false
   "language-babel":
+    autoIndentJSX: false
     transpileOnSave: false
   linter:
     lintOnFly: false
     showErrorTabFile: false
     showErrorTabProject: false
     statusBar: "Show all errors"
-  "linter-eslint":
-    fixOnSave: true
-    useGlobalEslint: true
+  "linter-eslint": {}
   "linter-jscs":
     esnext: true
     onlyConfig: true
   "linter-sass-lint":
-    globalSassLint: true
     noConfigDisable: true
   "linter-stylelint":
     disableWhenNoConfig: true
@@ -610,11 +627,7 @@
   "platformio-ide-terminal":
     ansiColors:
       normal:
-        black:
-          red: 17
-          green: 17
-          blue: 17
-          alpha: 1
+        black: "#111111"
       zBright: {}
     core: {}
     style:
@@ -665,6 +678,9 @@
   "trailing-spaces":
     enableForCursorLines: true
   "tree-view": {}
+  "unity-ui":
+    colorStatusIndicatorsInTreeView: true
+    showIcons: true
   "vim-mode":
     useClipboardAsDefaultRegister: true
   "vim-mode-clipboard-plus": {}
@@ -674,9 +690,21 @@
     showOnStartup: false
   whitespace:
     ignoreWhitespaceOnCurrentLine: false
+".babel.regexp.source":
+  editor:
+    softWrap: false
+".css.source.styled":
+  editor:
+    softWrap: false
 ".gfm.source":
   editor:
     softWrap: false
+".js.jsx.source":
+  editor:
+    softWrap: false
 ".json.source":
+  editor:
+    softWrap: false
+".languagebabel.ttlextension":
   editor:
     softWrap: false
