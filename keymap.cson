@@ -9,19 +9,19 @@
 
 # ==============================================================================
 
-'.platform-darwin':
-  'cmd-t': 'unset!' # 'fuzzy-finder:toggle-file-finder'
+#'.platform-darwin':
+#  'cmd-t': 'unset!' # 'fuzzy-finder:toggle-file-finder'
 
 # ==============================================================================
 
 'atom-workspace atom-text-editor:not(.mini)':
   'shift-enter': 'unset!' # 'jumpy:toggle'
 
-'.platform-darwin atom-workspace':
-  'shift-cmd-C': 'unset!' # 'color-picker:open'
+#'.platform-darwin atom-workspace':
+#  'shift-cmd-C': 'unset!' # 'color-picker:open'
 
-'atom-workspace':
-  'alt-cmd-v': 'unset!' # 'svg-preview:toggle'
+#'atom-workspace':
+#  'alt-cmd-v': 'unset!' # 'svg-preview:toggle'
 
 # ==============================================================================
 
@@ -143,6 +143,7 @@
 
 'atom-text-editor':
   'ctrl-k': 'core:move-up'
+  'cmd-shift-a': 'core:select-all'
 
 'atom-text-editor:not(.mini).vim-mode-plus:not(.insert-mode)':
   'tab': 'editor:indent-selected-rows'
@@ -157,9 +158,6 @@
   # 'space': 'autocomplete-plus:cancel'
 
 # ==============================================================================
-
-'atom-text-editor':
-  'cmd-shift-a': 'core:select-all'
 
 '.platform-darwin':
   'cmd-f': 'find-and-replace:show'
@@ -181,6 +179,10 @@
 
 'body.platform-darwin':
   'cmd-t': 'recent-files-fuzzy-finder:toggle-finder'
+  'cmd-p': 'fuzzy-finder:toggle-file-finder'
+  'cmd-b': 'fuzzy-finder:toggle-buffer-finder'
+  'shift-cmd-B': 'fuzzy-finder:toggle-git-status-finder'
+  'shift-enter': 'fuzzy-finder:invert-confirm'
   'cmd-shift-h': 'git-plus:menu'
 
   'cmd-g': 'git-projects:toggle-add'

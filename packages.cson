@@ -40,6 +40,7 @@ packages: [
   "color-picker"
   "command-logger"
   "compare-files"
+  "copy-as-rtf"
   "css-snippets"
   "custom-title"
   "dash"

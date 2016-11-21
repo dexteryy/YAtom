@@ -59,6 +59,9 @@
     scrollOnError: true
   "color-picker":
     uppercaseColorValues: true
+  "copy-as-rtf":
+    fontface: "Hack"
+    style: "monokai"
   core:
     closeEmptyWindows: false
     destroyEmptyPanes: false
@@ -175,6 +178,8 @@
       "platformio-ide-terminal"
       "markdown-preview-plus"
       "hyperclick"
+      "copy-as-rtf"
+      "fuzzy-finder"
     ]
     telemetryConsent: "limited"
     themes: [
