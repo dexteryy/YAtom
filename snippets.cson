@@ -92,9 +92,9 @@
     prefix: "props6"
     body: "const { ${1} } = this.props;"
 
-  "React: const { ${1} } = this.states (ES6)":
+  "React: const { ${1} } = this.state (ES6)":
     prefix: "state6"
-    body: "const { ${1} } = this.states;"
+    body: "const { ${1} } = this.state;"
 
   "PropTypes.func.isRequired":
     prefix: "ptf"
@@ -140,7 +140,7 @@
     prefix: "rcc"
     body: """
     //import styles from './index.scss';
-    //import * as styles from './style.js';
+    //import * as styles from './style';
     import React, { Component } from 'react';
     //import cssModules from 'react-css-modules';
     //import Radium from 'radium';
@@ -151,7 +151,9 @@
       stateSelector,
       actionDispatcher,
     } from 'webcube/boilerplate';
-    //import actionCreators from '../actions';
+    import {
+
+    } from '../actions';
 
     @connect()
     @stateSelector(
@@ -161,14 +163,13 @@
       }),
     )
     @actionDispatcher({
-      //notify: actionCreators.notify,
       push,
       replace,
     }, 'actions')
     //@Radium
     //@cssModules(styles)
     @pureRender()
-    class $1 extends Component {
+    class ${1:ComponentName} extends Component {
 
       static propTypes = {
 
@@ -183,12 +184,12 @@
       };
 
       render () {
-        const = {
+        const {
 
         } = this.props;
-        const = {
+        const {
 
-        } = this.states;
+        } = this.state;
         return (
           <div></div>
         );
@@ -196,28 +197,28 @@
 
     }
 
-    export default ${1};
+    export default ${1:ComponentName};
     """
 
   "React: stateless component (ES6)":
     prefix: "rcs"
     body: """
     //import styles from './index.scss';
-    //import * as styles from './style.js';
+    //import * as styles from './style';
     import React from 'react';
     //import cssModules from 'react-css-modules';
     //import Radium from 'radium';
 
-    function $1({
-      ${2:props},
+    function ${1:ComponentName}({
+      ${2:prop},
     }) {
       return (
         ${3:<div />}
       );
     }
 
-    //export default Radium($1);
-    //export default cssModules($1, styles);
+    //export default Radium(${1:ComponentName});
+    //export default cssModules(${1:ComponentName}, styles);
     """
 
   "es6+flow class skeleton":
@@ -251,10 +252,284 @@
     export default ${1:ClassName};
     """
 
+  "rcd":
+    "prefix": "rcd"
+    "body": """
+    import React, { Component } from 'react';
+    import { autobind } from 'core-decorators';
+    import {
+      pureRender,
+    } from 'webcube/boilerplate';
+
+    export default (${2:composedOpt = \\{\\}}) => ComposedComponent => {
+
+      @pureRender()
+      class ${1:Wrapper} extends Component {
+
+        render() {
+          return (
+            <ComposedComponent
+              {...this.props}
+              {...this.state} />
+          );
+        }
+
+      }
+
+      return ${1:Wrapper};
+
+    }
+    """
+
+  "add styleName":
+    "prefix": "stylen"
+    "body": """
+    styleName="${1}"
+    """
+
+  "add className":
+    "prefix": "classn"
+    "body": """
+    className="${1}"
+    """
+
+  "add style module":
+    "prefix": "styles"
+    "body": """
+    style={styles.${1}}
+    """
+
+  "add style object":
+    "prefix": "style="
+    "body": """
+    style={{
+      ${1}
+    }}
+    """
+
+  "add onTouchTap":
+    "prefix": "ont"
+    "body": """
+    onTouchTap={${1}}
+    """
+
+  "add onClick":
+    "prefix": "onk"
+    "body": """
+    onClick={${1}}
+    """
+
+  "add onChange":
+    "prefix": "onc"
+    "body": """
+    onChange={${1}}
+    """
+
+  "add onBlur":
+    "prefix": "onb"
+    "body": """
+    onBlur={${1}}
+    """
+
+  "add onRequestClose":
+    "prefix": "onr"
+    "body": """
+    onRequestClose={${1}}
+    """
+
+  "add helmet":
+    "prefix": "helmet"
+    "body": """
+    <Helmet
+      title={`\\$\\{constants.${1:PAGE_NAME}\\} - \\$\\{constants.${2:SITE_NAME}\\}`}
+      meta={[
+        { name: 'description', content: constants.${3:PAGE_DESC} },${4}
+      ]} />
+    """
+
+  "import style.js":
+    "prefix": "imstyle"
+    "body": """
+    import * as styles from './style';
+    """
+
+  "import css":
+    "prefix": "imcss"
+    "body": """
+    import styles from './${1:index}.css';
+    """
+
+  "import scss":
+    "prefix": "imscss"
+    "body": """
+    import styles from './${1:index}.scss';
+    """
+
+  "import react":
+    "prefix": "imreact"
+    "body": """
+    import React${1:, \\{ Component \\}} from 'react';
+    """
+
+  "import CSS Modules":
+    "prefix": "imcssmodule"
+    "body": """
+    import cssModules from 'react-css-modules';
+    """
+
+  "import Radium":
+    "prefix": "imradium"
+    "body": """
+    import Radium${1:, \\{ ${2:Style}${3} \\}} from 'radium';
+    """
+
+  "import helmet":
+    "prefix": "imhelmet"
+    "body": """
+    import Helmet from 'react-helmet';
+    """
+
+  "import webcube/boilerplate":
+    "prefix": "imwebcubeb"
+    "body": """
+    import {
+      ${1:pureRender},${2:
+      connect,
+      stateSelector,
+      actionDispatcher,}
+    } from 'webcube/boilerplate';
+    """
+
+  "add @pureRender()":
+    "prefix": "@pure"
+    "body": """
+    @pureRender()
+    """
+
+  "add webcube's @connect":
+    "prefix": "@connect"
+    "body": """
+    @connect()
+    @stateSelector(
+      (${1}) => ({
+      }),
+    )
+    @actionDispatcher({
+      ${2}
+    }, 'actions')
+    """
+
+".source.js":
+
+  "import constants":
+    "prefix": "imconstants"
+    "body": """
+    import * as constants from '${1:..}/constants';
+    """
+
+  "import utils":
+    "prefix": "imutils"
+    "body": """
+    import {
+      ${1}
+    } from '${2:.}/utils';
+    """
+
+  "import actions":
+    "prefix": "imactions"
+    "body": """
+    import {
+      ${2}
+    } from '${1:..}/actions';
+    """
+
+  "import react-router-redux's actions":
+    "prefix": "imrouteraction"
+    "body": """
+    import { ${1:push}${2:, replace}${3} } from 'react-router-redux';
+    """
+
+  "import core-decorators":
+    "prefix": "imdecorators"
+    "body": """
+    import {${1}} from 'core-decorators';
+    """
+
+  "import moment":
+    "prefix": "immoment"
+    "body": """
+    import moment from 'moment';
+    """
+
+  "add @autobind":
+    "prefix": "@bind"
+    "body": """
+    @autobind
+    """
+
+  "add @autobind method":
+    "prefix": "@bindm"
+    "body": """
+    @autobind
+    ${1:methodName}() {
+      ${2}
+    }
+    """
+
+  "export default function":
+    "prefix": "exdf"
+    "body": """
+    export default function ${1:functionName}(${2}) {
+      ${3}
+    }
+    """
+
+  "export default named function":
+    "prefix": "exdfn"
+    "body": """
+    function ${1:functionName}(${2}) {
+      ${3}
+    }
+
+    export default ${1:functionName};
+    """
+
+  "export const":
+    "prefix": "exco"
+    "body": """
+    export const ${1:name} = ${2};
+    """
+
+  "export const":
+    "prefix": "exenv"
+    "body": """
+    export const ${1:ENV_VAR_NAME} = process.env.NODE_ENV !== 'production'
+        && process.env.DEV_ENV_${1:ENV_VAR_NAME}
+      || '${2:valueForProductionEnv}';
+    """
+
+  "this.xxx":
+    "prefix": "t"
+    "body": """
+    this.${1}
+    """
+
   "process.exit":
     "prefix": "pe"
     "body": """
     process.exit(${1:code});
+    """
+
+  "process.env":
+    "prefix": "env"
+    "body": """
+    process.env.${1:code};
+    """
+
+  "NODE_ENV":
+    "prefix": "nodeenv"
+    "body": """
+    process.env.NODE_ENV
     """
 
   "alert":
@@ -277,7 +552,9 @@
     "prefix": "jp"
     "body": "JSON.parse(${1:obj});"
 
-".source.js":
+  "Object.keys":
+    "prefix": "keys"
+    "body": "Object.keys(${1})"
 
   "Gulp Pipe":
     "prefix": "gup"
@@ -295,10 +572,8 @@
     });
     """
 
-  "Gulp Task Watch":
-    "prefix": "guw"
-    "body": """
-    gulp.task('watch', function () {
-      gulp.watch('$1', ['$2']);$3
-    });
-    """
+".source.css, source.scss":
+
+  "px to rem":
+    "prefix": "px"
+    "body": "px2rem(${1})"

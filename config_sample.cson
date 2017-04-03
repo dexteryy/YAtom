@@ -20,16 +20,8 @@
     readyMadeConfigs: "csscomb"
   "atom-material-ui":
     colors:
-      abaseColor:
-        alpha: 1
-        blue: 234
-        green: 222
-        red: 128
-      accentColor:
-        alpha: 1
-        blue: 148
-        green: 140
-        red: 82
+      abaseColor: "#80deea"
+      accentColor: "#528c94"
       predefinedColor: "Cyan"
     tabs:
       compactTabs: true
@@ -47,6 +39,8 @@
     defaultProvider: "Fuzzy"
     maxVisibleSuggestions: 30
     strictMatching: true
+  "autocomplete-python":
+    useKite: false
   "autocomplete-ruby":
     rsensePath: "/usr/local/bin/rsense"
   "block-cursor":
@@ -88,7 +82,6 @@
       "json-schema"
       "minimap-autohide"
       "linter-tslint"
-      "autocomplete-python"
       "vim-mode"
       "atom-typescript"
       "highlight-column"
@@ -101,6 +94,9 @@
       "term3"
       "compare-files"
       "autocomplete-ruby"
+      "python-indent"
+      "kite"
+      "Hydrogen"
     ]
     ignoredNames: [
       ".git"
@@ -180,11 +176,13 @@
       "hyperclick"
       "copy-as-rtf"
       "fuzzy-finder"
+      "minimap-highlight-selected"
+      "zentabs"
     ]
     telemetryConsent: "limited"
     themes: [
       "atom-dark-ui"
-      "monokai-blackboard"
+      "atom-material-syntax-dark"
     ]
   "custom-title":
     template: "<% if (fileInProject) { %><%= projectName %>/<%= relativeFilePath %><% } else { %><%= filePath %><% } %><% if (projectPath) { %> - <%= projectPath %><% } %>"
@@ -513,6 +511,8 @@
     fontFamily: "Hack"
     fontSize: 13
     invisibles: {}
+    softWrap: false
+    softWrapAtPreferredLineLength: false
     tabType: "soft"
     zoomFontWhenCtrlScrolling: true
   emmet:
@@ -530,7 +530,7 @@
     promptWhenFileHasChangedOnDisk: false
   "find-and-replace":
     focusEditorAfterSearch: true
-    openProjectFindResultsInRightPane: true
+    projectSearchResultsPaneSplitDirection: "right"
     scrollToResultOnLiveSearch: true
   "fuzzy-finder":
     preserveLastSearch: true
@@ -572,9 +572,6 @@
     autoIndentJSX: false
     transpileOnSave: false
   linter:
-    lintOnFly: false
-    showErrorTabFile: false
-    showErrorTabProject: false
     statusBar: "Show all errors"
   "linter-eslint": {}
   "linter-jscs":
@@ -584,6 +581,10 @@
     noConfigDisable: true
   "linter-stylelint":
     disableWhenNoConfig: true
+  "linter-ui-default":
+    showPanel: true
+  "linter-write-good":
+    severityLevel: "Warning"
   "markdown-preview":
     useGitHubStyle: true
   "markdown-preview-plus":
@@ -695,21 +696,30 @@
     showOnStartup: false
   whitespace:
     ignoreWhitespaceOnCurrentLine: false
+  zentabs:
+    maximumOpenedTabs: 7
+    neverCloseUnsaved: true
 ".babel.regexp.source":
   editor:
     softWrap: false
+    softWrapAtPreferredLineLength: false
 ".css.source.styled":
   editor:
     softWrap: false
+    softWrapAtPreferredLineLength: false
 ".gfm.source":
   editor:
     softWrap: false
+    softWrapAtPreferredLineLength: false
 ".js.jsx.source":
   editor:
     softWrap: false
+    softWrapAtPreferredLineLength: false
 ".json.source":
   editor:
     softWrap: false
+    softWrapAtPreferredLineLength: false
 ".languagebabel.ttlextension":
   editor:
     softWrap: false
+    softWrapAtPreferredLineLength: false

@@ -11,3 +11,6 @@ git-time-machine/
 split-diff/
 config.cson
 projects.cson
+kite-config.json
+linter-config.json
+package-deps-state.json

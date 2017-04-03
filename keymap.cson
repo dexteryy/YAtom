@@ -63,6 +63,8 @@
   ', d b': 'bezier-curve-editor:open'
   ', d s': 'editor:log-cursor-scope'
 
+  ', f p': 'hey-pane:toggle-focus-of-active-pane'
+
   ', g l': 'git-log:show'
   ', g h': 'git-plus:log-current-file'
   ', g t': 'git-time-machine:toggle'
